@@ -1,0 +1,11 @@
+
+s	java:S116"RRename this field "FPS_SET" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıâüÚøÿÿÿÿ8’ùÆ‚Á1
+C
+java:S1170"!Make this final field static too.(ıâüÚøÿÿÿÿ8’ùÆ‚Á1
+u
+java:S1450"YRemove the "gameThread" field and declare it as a local variable in the relevant methods.(÷Şš8ßëĞ‚Á1
+Y
+java:S1854"7Remove this useless assignment to local variable "now".(îíİÃüÿÿÿÿ8…ÓÉ‚Á1
+G	java:S106-"+Replace this use of System.out by a logger.(ÿ¬‰î8½ú‚Á1
+K
+java:S1068".Remove this unused "gameWindow" private field.(¤ÅÚ±8•ùÆ‚Á1
