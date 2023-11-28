@@ -1,19 +1,20 @@
 
 F
-java:S1659"$Declare "yDelta" on a separate line.(ßŒüŸıÿÿÿÿ8­á‰šÁ1
+java:S1659"$Declare "yDelta" on a separate line.(ßŒüŸıÿÿÿÿ8§óôÁ1
+g
+java:S1659"EDeclare "aniIndex" and all following declarations on a separate line.(Ë©¡‘şÿÿÿÿ8¨óôÁ1
 J
-java:S1948"-Make "mouseInputs" transient or serializable.(ş‹´Ä8®á‰šÁ1
+java:S1948"-Make "mouseInputs" transient or serializable.(ş‹´Ä8¨óôÁ1
 B
-java:S1948"%Make "img" transient or serializable.(èÌôà8®á‰šÁ1
-]	java:S125"<This block of commented-out lines of code should be removed.(öÛğÊıÿÿÿÿ8®á‰šÁ1
-S
-java:S1854""6Remove this useless assignment to local variable "is".(„°ë 8Óş–šÁ1
-D
-java:S1481""'Remove this unused "is" local variable.(„°ë 8Ôş–šÁ1
-L	java:S106("+Replace this use of System.out by a logger.(úÍËæûÿÿÿÿ8°á‰šÁ1
-W
-java:S1161D":Add the "@Override" annotation above this method signature(³ıŸê8±á‰šÁ1
-L
-java:S1068"*Remove this unused "xDelta" private field.(ßŒüŸıÿÿÿÿ8²á‰šÁ1
-L
-java:S1068"*Remove this unused "yDelta" private field.(ßŒüŸıÿÿÿÿ8²á‰šÁ1
+java:S1948"%Make "img" transient or serializable.(èÌôà8¨óôÁ1
+H
+java:S1948",Make "animations" transient or serializable.(÷ßËz8¨óôÁ1
+]	java:S125"<This block of commented-out lines of code should be removed.(öÛğÊıÿÿÿÿ8©óôÁ1
+]	java:S1255"<This block of commented-out lines of code should be removed.(ğ’³Şüÿÿÿÿ8­óôÁ1
+J
+java:S14817"(Remove this unused "is2" local variable.(“ïè­øÿÿÿÿ8­óôÁ1
+L	java:S106="+Replace this use of System.out by a logger.(úÍËæûÿÿÿÿ8®óôÁ1
+F	java:S106B"+Replace this use of System.out by a logger.(û¶w8®óôÁ1
+>	java:S131q""Add a default case to this switch.(àıÄÆ8²óôÁ1
+X
+java:S1161‚":Add the "@Override" annotation above this method signature(³ıŸê8³óôÁ1
