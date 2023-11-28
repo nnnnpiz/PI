@@ -1,23 +1,19 @@
 
 F
-java:S1659"$Declare "yDelta" on a separate line.(ßŒüŸıÿÿÿÿ8ôÓ”ƒÁ1
-D
-java:S1659""Declare "yDir" on a separate line.(¾¬Ñâÿÿÿÿÿ8ôÓ”ƒÁ1
+java:S1659"$Declare "yDelta" on a separate line.(ßŒüŸıÿÿÿÿ8­á‰šÁ1
 J
-java:S1948"-Make "mouseInputs" transient or serializable.(ş‹´Ä8õÓ”ƒÁ1
+java:S1948"-Make "mouseInputs" transient or serializable.(ş‹´Ä8®á‰šÁ1
+B
+java:S1948"%Make "img" transient or serializable.(èÌôà8®á‰šÁ1
+]	java:S125"<This block of commented-out lines of code should be removed.(öÛğÊıÿÿÿÿ8®á‰šÁ1
+S
+java:S1854""6Remove this useless assignment to local variable "is".(„°ë 8Óş–šÁ1
 D
-java:S1948"'Make "rects" transient or serializable.(âËõ„8Ûâ—ƒÁ1
+java:S1481""'Remove this unused "is" local variable.(„°ë 8Ôş–šÁ1
+L	java:S106("+Replace this use of System.out by a logger.(úÍËæûÿÿÿÿ8°á‰šÁ1
 W
-java:S11615":Add the "@Override" annotation above this method signature(³ıŸê8ùÓ”ƒÁ1
-[
-java:S1659]">Declare "y" and all following declarations on a separate line.(ÏÛ²Â8üÓ”ƒÁ1
-D
-java:S1659^""Declare "yDir" on a separate line.(ÀØ«°ûÿÿÿÿ8üÓ”ƒÁ1
-Q
-java:S1128"4Remove this unused import 'java.awt.event.KeyEvent'.(¬ğİÍ8ëâ—ƒÁ1
-T
-java:S1128	"7Remove this unused import 'java.awt.event.KeyListener'.(ç„›û8ëâ—ƒÁ1
+java:S1161D":Add the "@Override" annotation above this method signature(³ıŸê8±á‰šÁ1
 L
-java:S1068"*Remove this unused "frames" private field.(µ¦ƒúÿÿÿÿ8şÓ”ƒÁ1
-O
-java:S1068"-Remove this unused "lastCheck" private field.(ÌÃ¯Öøÿÿÿÿ8şÓ”ƒÁ1
+java:S1068"*Remove this unused "xDelta" private field.(ßŒüŸıÿÿÿÿ8²á‰šÁ1
+L
+java:S1068"*Remove this unused "yDelta" private field.(ßŒüŸıÿÿÿÿ8²á‰šÁ1

@@ -3,31 +3,49 @@ package main;
 import inputs.KeyboardInputs;
 import inputs.MouseInputs;
 
+import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.util.ArrayList;
-import java.util.Random;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.io.InputStream;
+
 
 public class GamePanel extends JPanel {
     private MouseInputs mouseInputs; //crio este atributo de class de forma a nao passar como MouseListener dois objetos diferentes
     private float xDelta=100, yDelta=100;
-    private float xDir =1f, yDir=1f;
-    private int frames =0;
-    private long lastCheck=0;
-    private Color color = new Color(150,20,90);
-    private Random random;
+    //private Random random;
+    private BufferedImage img; //usamos BufferedImage para desta forma termos numa so imagem o conjunto de sprites das animaçoes e assim podermos selecionar qual sprite usar com uma so imagem!
 
-    //temp
-    private ArrayList<MyRect> rects = new ArrayList<>();
 
     public GamePanel(){
-        random = new Random();
+
         mouseInputs = new MouseInputs(this);
+
+        importImg();
+        
+        setPanelSize();
         addKeyListener(new KeyboardInputs(this));
         addMouseListener(mouseInputs); //clicks
         addMouseMotionListener(mouseInputs); //drags
+    }
+
+    private void importImg() {
+        InputStream is = getClass().getResourceAsStream("/player_sprites.png");
+        InputStream is2 = getClass().getResourceAsStream("/sprite2");
+
+        try {//load inputStream:
+            img = ImageIO.read(is2);
+        } catch (IOException e) {
+            System.out.println("error loading image!");
+        }
+    }
+
+    private void setPanelSize() {
+        Dimension size = new Dimension(1280,800); //imgs de 32 pixeis por 32 => 1280/32 = 40 wide. 800/32 = 25 height
+        setMinimumSize(size);
+        setPreferredSize(size);
+        setMaximumSize(size);
     }
 
     public void changeXDelta(int value){
@@ -46,89 +64,13 @@ public class GamePanel extends JPanel {
 
     }
 
-    public void spawnRect(int x, int y){
-        rects.add(new MyRect(x,y));
-    }
 
     public void paintComponent(Graphics g){
         super.paintComponent(g);
-
-        //temp rects
-        for(MyRect rect: rects){
-            rect.updateRect();
-            rect.draw(g);
-        }
-        updateRectangle();
-        g.setColor(color);
-        g.fillRect((int)xDelta, (int)yDelta, 200,50);
+        g.drawImage(img.getSubimage(0,0, 64, 40) ,0,0, 128, 80, null); //4º arg. ImageObserver usado p monitorizar o estado da imagem antes de ser FULLY drawn nao vai ser usado por questoes de simplicidade de codigo
 
 
     }
 
-    private void updateRectangle(){
-        xDelta+=xDir;
-        if(xDelta > 400 || xDelta <0) {//XWIDTH and HEIGHT
-            xDir *= -1; //reverse direction
-            color = getRndColor();
-        }
-
-        yDelta+=yDir;
-        if(yDelta>400 || yDelta <0) {
-            yDir *= -1;
-            color = getRndColor();
-        }
-
-    }
-
-    private Color getRndColor() {
-        int r = random.nextInt(255);
-        int g=random.nextInt(255);
-        int b=random.nextInt(255);
-
-        return new Color(r,g,b);
-    }
-
-    public class MyRect{
-
-        int x,y,w,h;
-        int xDir=1, yDir=1;
-        Color color;
-
-        public MyRect(int x, int y){
-            this.x=x;
-            this.y=y;
-            w=random.nextInt(50);
-            h=w;
-            color=newColor();
-        }
-
-        public void updateRect(){
-
-            this.x +=xDir;
-            this.y +=yDir;
-
-            if((x+w) > 400 || x<0){
-                xDir *=-1;
-                color=newColor();
-            }
-
-            if((y+h) > 400 || y<0){
-                yDir*=-1;
-                color=newColor();
-            }
-
-        }
-
-        private Color newColor(){
-            return new Color(random.nextInt(255),random.nextInt(255),random.nextInt(255));
-        }
-
-        public void draw(Graphics g){
-            g.setColor(color);
-            g.fillRect(x,y,w,h);
-        }
-
-
-    }
 
 }
