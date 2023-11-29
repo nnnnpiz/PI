@@ -19,3 +19,13 @@ H
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+H
+src/entities/Entity.java,7\7\77408e3b0917e084a14145fce18d7cd2f7eccc2d
+H
+src/entities/Player.java,f\3\f3eb1116323b45c6fd08fecb6abbdeea27da293b
+G
+src/utils/LoadSave.java,0\7\07d09289551ddccce3f333e450991ae08849e5ab
+E
+src/levels/Level.java,0\b\0b5f8f7360cb98243e2fd0cdfe841b4900cf219f
+L
+src/levels/LevelManager.java,e\0\e0534c0b6919d8a26217d70b3a6864151edf62c0

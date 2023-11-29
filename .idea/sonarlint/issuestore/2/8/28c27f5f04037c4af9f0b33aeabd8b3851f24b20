@@ -1,11 +1,28 @@
 
-s	java:S116"RRename this field "FPS_SET" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıâüÚøÿÿÿÿ8’ùÆ‚Á1
+s	java:S116"RRename this field "FPS_SET" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıâüÚøÿÿÿÿ8ëšÆÁ1
+n	java:S116"RRename this field "UPS_SET" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(èÎüõ8ëšÆÁ1
 C
-java:S1170"!Make this final field static too.(ıâüÚøÿÿÿÿ8’ùÆ‚Á1
+java:S1170"!Make this final field static too.(ıâüÚøÿÿÿÿ8ëšÆÁ1
+>
+java:S1170"!Make this final field static too.(èÎüõ8ëšÆÁ1
 u
-java:S1450"YRemove the "gameThread" field and declare it as a local variable in the relevant methods.(÷Şš8ßëĞ‚Á1
-Y
-java:S1854"7Remove this useless assignment to local variable "now".(îíİÃüÿÿÿÿ8…ÓÉ‚Á1
-G	java:S106-"+Replace this use of System.out by a logger.(ÿ¬‰î8½ú‚Á1
+java:S1450"YRemove the "gameThread" field and declare it as a local variable in the relevant methods.(÷Şš8ìšÆÁ1
+b
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(æå§°8îšÆÁ1
+b
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Æ´ù8îšÆÁ1
+a
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ÇÛ«j8îšÆÁ1
+b
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(å„±í8îšÆÁ1
+g
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(“´¡êúÿÿÿÿ8îšÆÁ1
+b
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Úäóµ8îšÆÁ1
+b
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(²åå8ïšÆÁ1
+X	java:S125b"<This block of commented-out lines of code should be removed.(ù¹•ê8ùšÆÁ1
+L	java:S106l"+Replace this use of System.out by a logger.(Æ——ùúÿÿÿÿ8„šÆÁ1
 K
-java:S1068".Remove this unused "gameWindow" private field.(¤ÅÚ±8•ùÆ‚Á1
+java:S1068
+".Remove this unused "gameWindow" private field.(¤ÅÚ±8†šÆÁ1

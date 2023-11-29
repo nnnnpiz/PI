@@ -1,20 +1,25 @@
 
-F
-java:S1659"$Declare "yDelta" on a separate line.(ßŒüŸıÿÿÿÿ8§óôÁ1
-g
-java:S1659"EDeclare "aniIndex" and all following declarations on a separate line.(Ë©¡‘şÿÿÿÿ8¨óôÁ1
+£
+java:S11862"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÉüÌ”ùÿÿÿÿ8ã½ôÃÁ1
 J
-java:S1948"-Make "mouseInputs" transient or serializable.(ş‹´Ä8¨óôÁ1
-B
-java:S1948"%Make "img" transient or serializable.(èÌôà8¨óôÁ1
+java:S1948"-Make "mouseInputs" transient or serializable.(ş‹´Ä8¨óôÁ1
 H
-java:S1948",Make "animations" transient or serializable.(÷ßËz8¨óôÁ1
-]	java:S125"<This block of commented-out lines of code should be removed.(öÛğÊıÿÿÿÿ8©óôÁ1
-]	java:S1255"<This block of commented-out lines of code should be removed.(ğ’³Şüÿÿÿÿ8­óôÁ1
-J
-java:S14817"(Remove this unused "is2" local variable.(“ïè­øÿÿÿÿ8­óôÁ1
-L	java:S106="+Replace this use of System.out by a logger.(úÍËæûÿÿÿÿ8®óôÁ1
-F	java:S106B"+Replace this use of System.out by a logger.(û¶w8®óôÁ1
->	java:S131q""Add a default case to this switch.(àıÄÆ8²óôÁ1
+java:S1948 "&Make "game" transient or serializable.(Ä¿–øÿÿÿÿ8†´ˆÄÁ1
+L	java:S106/"+Replace this use of System.out by a logger.(¦£Ãüøÿÿÿÿ8È¿†ÆÁ1
+W
+java:S11616":Add the "@Override" annotation above this method signature(³ıŸê8³óôÁ1
+O
+java:S11359"2Complete the task associated to this TODO comment.(ÜİÉ•8‘÷õÃÁ1
+O
+java:S1128"2Remove this unused import 'javax.imageio.ImageIO'.(‘çÔû8éœ…ÆÁ1
+[
+java:S1128	"9Remove this unused import 'java.awt.image.BufferedImage'.(×íĞ‡şÿÿÿÿ8éœ…ÆÁ1
+R
+java:S1128
+"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8éœ…ÆÁ1
+M
+java:S1128"0Remove this unused import 'java.io.InputStream'.(¹»º8éœ…ÆÁ1
 X
-java:S1161‚":Add the "@Override" annotation above this method signature(³ıŸê8³óôÁ1
+java:S1128"6Remove this unused import 'utils.Constants.Direction'.(à¼½ñüÿÿÿÿ8éœ…ÆÁ1
+Y
+java:S1128"<Remove this unused import 'utils.Constants.PlayerConstants'.(Ğ¢ªß8êœ…ÆÁ1
