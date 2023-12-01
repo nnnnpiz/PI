@@ -29,3 +29,23 @@ E
 src/levels/Level.java,0\b\0b5f8f7360cb98243e2fd0cdfe841b4900cf219f
 L
 src/levels/LevelManager.java,e\0\e0534c0b6919d8a26217d70b3a6864151edf62c0
+J
+src/utils/HelpMethods.java,2\0\2012de03d919bde29e4a5d7cab488f6a5c7a8cdd
+H
+src/gamestates/Menu.java,7\b\7b9c6425e0e46f22e570961cd10d649481659db8
+K
+src/gamestates/Playing.java,6\8\68abca656ce9702155c46aaf173c7571f11b22e4
+M
+src/gamestates/Gamestate.java,5\2\528df89beae4dd45f17a778cd8eedd48b737d80f
+P
+ src/gamestates/Statemethods.java,9\5\9584a3c3bef6b4085f4c43d110477bd5a1847c98
+I
+src/gamestates/State.java,6\6\668595c6cca1e7930321b661039d66cba274db06
+F
+src/ui/MenuButton.java,6\8\680a9c19eab05ec05ba3d27b7590d6b98f77b57b
+H
+src/ui/PauseOverlay.java,b\c\bcbc834bc742961c5492c388840df80c43f8ef28
+G
+src/ui/PauseButton.java,e\1\e12a417a9ac6626a1373c4cce9c1a1d630d5d5b0
+G
+src/ui/SoundButton.java,9\f\9f42f504f0d996babee4f9f04549c70ebd1b8630
