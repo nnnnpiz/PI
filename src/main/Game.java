@@ -3,6 +3,7 @@ package main;
 import gamestates.Gamestate;
 import gamestates.Menu;
 import gamestates.Playing;
+import utils.LoadSave;
 
 import java.awt.*;
 
@@ -32,10 +33,10 @@ public class Game implements Runnable{
 
         gamePanel = new GamePanel(this);
         gameWindow = new GameWindow(gamePanel);
+        gamePanel.setFocusable(true);
         gamePanel.requestFocus(); //request input focus p ler INPUT
 
         startGameLoop();
-
     }
 
     private void initClasses() {
@@ -46,7 +47,6 @@ public class Game implements Runnable{
     private void startGameLoop(){
         gameThread = new Thread(this);
         gameThread.start();
-
     }
 
     //smp q quero fzr alguma mudança no jogo chamo este metodo. ex: mudar level = level.update(), mudar pos do jogador etc

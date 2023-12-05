@@ -45,7 +45,7 @@ public class MenuButton {
 
     public void update(){
         index = 0;
-        if(mouseOver) //p pegar imgs diferentes
+        if(mouseOver) //p pegar atlas diferentes
             index =1;
         if(mousePressed)
             index = 2;
