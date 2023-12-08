@@ -63,3 +63,21 @@ K
 src/ui/GameOverOverlay.java,c\4\c4cb80e752b06ef397401f3b645a881f2d8c19a2
 Q
 !src/ui/LevelCompletedOverlay.java,d\6\d6f8e327d208c1de7e5e8a15cbf2d7089d467d26
+K
+src/objects/GameObject.java,2\e\2ef40ac2497a320191cbe37825cc66c477e044f3
+G
+src/objects/Potion.java,8\a\8a7461cd29376e1a5becdcd94cdd4e31dcddaabb
+N
+src/objects/GameContainer.java,4\f\4f17d1e1181527cde27300340f413c8447f8eb87
+N
+src/objects/ObjectManager.java,a\1\a16583f8566c4a08a7baf3c5d140c326921ec28e
+F
+src/objects/Spike.java,7\4\74a3f11d78b3798fd8e9de9f1f55bb76895748d4
+G
+src/objects/Cannon.java,3\c\3c0da8c942af32fa8179246ce466db3c7c6b9758
+K
+src/objects/Projectile.java,4\8\48e4c3c2ef5f52b9d257807d2472bab8c2d46c98
+H
+src/ui/AudioOptions.java,4\6\46851ebb8beb2d7d57c60bcad7482b1ab714e36b
+O
+src/gamestates/GameOptions.java,0\4\0400557f6f74acd5d7cf1ba0dbbca904f73c5ff6

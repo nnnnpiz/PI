@@ -4,6 +4,7 @@ import entities.EnemyManager;
 import entities.Player;
 import levels.LevelManager;
 import main.Game;
+import objects.ObjectManager;
 import ui.GameOverOverlay;
 import ui.LevelCompletedOverlay;
 import ui.PauseOverlay;
@@ -25,6 +26,8 @@ public class Playing extends State implements Statemethods{
     private Player player;
     private LevelManager levelManager;
     private EnemyManager enemyManager;
+    //OBJECTMANAGER:
+    private ObjectManager objectManager;
     private PauseOverlay pauseOverlay;
     private GameOverOverlay gameOverOverlay;
     private LevelCompletedOverlay levelCompletedOverlay;
@@ -41,6 +44,7 @@ public class Playing extends State implements Statemethods{
 
     private boolean gameOver;
     private boolean lvlCompleted=false;
+    private boolean playerDying;
 
     public Playing(Game game){
         super(game);
@@ -65,6 +69,7 @@ public class Playing extends State implements Statemethods{
 
     private void loadStartLevel() {
         enemyManager.loadEnemies(levelManager.getCurrentLevel());
+        objectManager.loadObjects(levelManager.getCurrentLevel());
     }
 
     //calc para o start level
@@ -76,6 +81,7 @@ public class Playing extends State implements Statemethods{
     private void initClasses() {
         levelManager = new LevelManager(game);
         enemyManager = new EnemyManager(this);
+        objectManager = new ObjectManager(this);
 
         player = new Player(200,200, (int) (64*SCALE), (int)(40*SCALE), this);
         player.loadLvlData(levelManager.getCurrentLevel().getLvlData()); //player fica c lvldata stored
@@ -94,8 +100,14 @@ public class Playing extends State implements Statemethods{
             pauseOverlay.update();
         } else if(lvlCompleted){
             levelCompletedOverlay.update();
-        } else if(!gameOver){
+        } else if(gameOver){
+            gameOverOverlay.update();
+        } else if(playerDying){ //check se o jogador esta a morrer
+            player.update();
+        }//OU ESTA GAMEOVER OU O PLAYERDYING!
+        else {
             levelManager.update();
+            objectManager.update(levelManager.getCurrentLevel().getLvlData(), player);
             player.update();
             enemyManager.update(levelManager.getCurrentLevel().getLvlData(), player);
             //metodo p ver se precisamos de mexer a camera
@@ -132,6 +144,7 @@ public class Playing extends State implements Statemethods{
         levelManager.draw(g, xLvlOffset);
         player.render(g, xLvlOffset);
         enemyManager.draw(g, xLvlOffset);
+        objectManager.draw(g, xLvlOffset);
 
         //so quero dar draw no pause overlay se PAUSED= TRUE
         if(paused) {
@@ -159,16 +172,30 @@ public class Playing extends State implements Statemethods{
         gameOver=false;
         paused=false;
         lvlCompleted=false;
+        playerDying=false;
         player.resetAll();
         enemyManager.resetAllEnemies();
+        objectManager.resetAllObjects();
     }
 
     public void setGameOver(boolean gameOver){
         this.gameOver = gameOver;
     }
 
+    public void checkObjectHit(Rectangle2D.Float hitbox){
+        objectManager.checkObjectHit(hitbox);
+    }
+
     public void checkEnemyHit(Rectangle2D.Float attackBox){
         enemyManager.checkEnemyHit(attackBox);
+    }
+
+    public void checkPotionTouched(Rectangle2D.Float hitbox){
+        objectManager.checkObjectTouched(hitbox);
+    }
+
+    public void checkSpikesTouched(Player p) {
+        objectManager.checkSpikesTouched(p);
     }
 
     public void mouseDragged(MouseEvent e){
@@ -191,7 +218,9 @@ public class Playing extends State implements Statemethods{
                 pauseOverlay.mousePressed(e);
             else if(lvlCompleted)
                 levelCompletedOverlay.mousePressed(e);
-        }
+        } else {
+            gameOverOverlay.mousePressed(e);
+        }//gameOever
     }
 
     @Override
@@ -201,7 +230,8 @@ public class Playing extends State implements Statemethods{
                 pauseOverlay.mouseReleased(e);
             else if(lvlCompleted)
                 levelCompletedOverlay.mouseReleased(e);
-        }
+        } else
+            gameOverOverlay.mouseReleased(e);
     }
 
     @Override
@@ -211,7 +241,8 @@ public class Playing extends State implements Statemethods{
                 pauseOverlay.mouseMoved(e);
             else if(lvlCompleted)
                 levelCompletedOverlay.mouseMoved(e);
-        }
+        } else
+            gameOverOverlay.mouseMoved(e);
     }
 
     @Override
@@ -287,5 +318,18 @@ public class Playing extends State implements Statemethods{
 
     public EnemyManager getEnemyManager(){
         return enemyManager;
+    }
+
+    public ObjectManager getObjectManager(){
+        return objectManager;
+    }
+
+    public LevelManager getLevelManager(){
+        return  levelManager;
+    }
+
+
+    public void setPlayerDying(boolean b) {
+        this.playerDying = playerDying;
     }
 }

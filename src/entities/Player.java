@@ -51,19 +51,20 @@ public class Player extends Entity{
     //private int currentHealth = maxHealth;
     private int healthWidth = healthBarWidth;
 
-
     private int flipX = 0;
     private int flipW = 1;
 
     private boolean attackChecked;
     private Playing playing;
 
+    private int tileY=0;
+
     public Player(float x, float y, int width, int height, Playing playing) {
         super(x, y,width,height);
         this.playing=playing;
         this.state = IDLE;
         this.maxHealth=100;
-        this.currentHealth=maxHealth;
+        this.currentHealth=35; //TODO mudar p maxHealth
         this.walkSpeed=Game.SCALE * 1.0f;
         loadAnimations();
         initHitbox(20, 27);
@@ -83,14 +84,30 @@ public class Player extends Entity{
 
     public void update() {
         updateHealthBar();
+
         if (currentHealth <= 0){
-            playing.setGameOver(true);
+            if(state != DEAD){ //se estamos "a morrer" damos reeset nas animations. e dps no outro else if é qd ja acabou as animaçoes vamos fzr aparecer o GameOveerOverlay
+                state=DEAD;
+                aniTick=0; //mal morrermos nao queremos dar mais update na attackbox nem updatePos, se o player ta moving... se ta atacking etc (metodos abaixo)
+                aniIndex=0;
+                playing.setPlayerDying(true);
+
+            } else if(aniIndex == GetSpriteAmount(DEAD )-1 && aniTick >= ANI_SPEED -1){ //check se o ultimo sprite da animation esta feito
+                playing.setGameOver(true);
+            } else
+                updateAnimationTick(); //se tivemos entre esses 2 ifs d cima nos damos update na animaçao SO do player
+
             return;
         }
 
         updateAttackBox();
 
         updatePos();
+        if(moving){
+            checkPotionTouched();
+            checkSpikesTouched();
+            tileY =(int)( hitbox.y / Game.TILES_SIZE);
+        }
         if(attacking)
             checkAttack();
         updateAnimationTick();
@@ -98,11 +115,20 @@ public class Player extends Entity{
 
     }
 
+    private void checkSpikesTouched() {
+        playing.checkSpikesTouched(this);
+    }
+
+    private void checkPotionTouched() {
+        playing.checkPotionTouched(hitbox);
+    }
+
     private void checkAttack() {
         if(attackChecked || aniIndex != 1) //atack é no 1
             return;
         attackChecked=true;
         playing.checkEnemyHit(attackBox);
+        playing.checkObjectHit(attackBox); //check se no ataque q ele fez atingiu um barrel ou box
     }
 
     private void updateAttackBox() {
@@ -272,6 +298,14 @@ public class Player extends Entity{
             currentHealth = maxHealth;
     }
 
+    public void kill() {
+        currentHealth=0;
+    }
+
+    public void changePower(int value){
+        System.out.println("added power");
+    }
+
     private void loadAnimations() {
             BufferedImage img = LoadSave.GetSpriteAtlas(LoadSave.PLAYER_ATLAS); //decidimos o tipo de atlas a carreagr
 
@@ -335,4 +369,10 @@ public class Player extends Entity{
             inAir=true;
 
     }
+
+    public int getTileY(){
+        return tileY;
+    }
+
+
 }

@@ -1,31 +1,29 @@
 
-_
-java:S6208?"CMerge the previous cases into this one using comma-separated label.(†ÚŠb8È…’¾Â1
-s	java:S116"RRename this field "FPS_SET" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıâüÚøÿÿÿÿ8¥ğ¾Â1
-n	java:S116"RRename this field "UPS_SET" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(èÎüõ8¦ğ¾Â1
+s	java:S116"RRename this field "FPS_SET" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıâüÚøÿÿÿÿ8×âªÑÄ1
+n	java:S116"RRename this field "UPS_SET" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(èÎüõ8×âªÑÄ1
 C
-java:S1170"!Make this final field static too.(ıâüÚøÿÿÿÿ8¦ğ¾Â1
+java:S1170"!Make this final field static too.(ıâüÚøÿÿÿÿ8×âªÑÄ1
 >
-java:S1170"!Make this final field static too.(èÎüõ8¦ğ¾Â1
+java:S1170"!Make this final field static too.(èÎüõ8×âªÑÄ1
 u
-java:S1450"YRemove the "gameThread" field and declare it as a local variable in the relevant methods.(÷Şš8‡¼’¾Â1
+java:S1450"YRemove the "gameThread" field and declare it as a local variable in the relevant methods.(÷Şš8×âªÑÄ1
 b
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(æå§°8ªğ¾Â1
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(æå§°8×âªÑÄ1
 b
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Æ´ù8ªğ¾Â1
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Æ´ù8×âªÑÄ1
 a
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ÇÛ«j8ªğ¾Â1
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ÇÛ«j8×âªÑÄ1
 b
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(å„±í8ªğ¾Â1
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(å„±í8×âªÑÄ1
 g
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(“´¡êúÿÿÿÿ8ªğ¾Â1
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(“´¡êúÿÿÿÿ8×âªÑÄ1
 b
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Úäóµ8ªğ¾Â1
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Úäóµ8×âªÑÄ1
 b
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(²åå8«ğ¾Â1
-X	java:S125z"<This block of commented-out lines of code should be removed.(ù¹•ê8³ğ¾Â1
-M	java:S106„"+Replace this use of System.out by a logger.(Æ——ùúÿÿÿÿ8´ğ¾Â1
+java:S1124 "EReorder the modifiers to comply with the Java Language Specification.(²åå8×âªÑÄ1
+Y	java:S125…"<This block of commented-out lines of code should be removed.(ù¹•ê8àâªÑÄ1
+M	java:S106"+Replace this use of System.out by a logger.(Æ——ùúÿÿÿÿ8àâªÑÄ1
 H
-java:S1128"+Remove this unused import 'utils.LoadSave'.(†‚ñø8Ï¹Ï’Ã1
+java:S1128"+Remove this unused import 'utils.LoadSave'.(†‚ñø8Ûı¯ÑÄ1
 K
-java:S1068".Remove this unused "gameWindow" private field.(¤ÅÚ±8¶ğ¾Â1
+java:S1068".Remove this unused "gameWindow" private field.(¤ÅÚ±8àâªÑÄ1

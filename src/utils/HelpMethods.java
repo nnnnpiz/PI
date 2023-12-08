@@ -2,6 +2,7 @@ package utils;
 
 import entities.Crabby;
 import main.Game;
+import objects.*;
 
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
@@ -9,6 +10,7 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 import static utils.Constants.EnemyConstants.CRABBY;
+import static utils.Constants.ObjectConstants.*;
 
 public class HelpMethods {
 
@@ -41,6 +43,11 @@ public class HelpMethods {
 
 
     } //check se é TILE ou se a pos esta dentro da gamewindow
+
+
+    public static boolean IsProjectileHittingLevel(Projectile p, int[][] lvlData){
+        return IsSolid(p.getHitbox().x + p.getHitbox().width/2, p.getHitbox().y + p.getHitbox().height/2, lvlData); //getHitbox.x da o corner left do sprite logo precisamos d adicionar (p ficar no centro)
+    } //desta forma mal tocar na parede vai detetar q tocou no "lvl" e vai desaparecer
 
     public static boolean IsTileSolid(int xTile, int yTile, int[][] lvlData){
         int value = lvlData[yTile][xTile];
@@ -98,14 +105,34 @@ public class HelpMethods {
             return IsSolid(hitbox.x + xSpeed , hitbox.y + hitbox.height + 1, lvlData);
     }
 
+    public static boolean CanCannonSeePlayer(int[][] lvlData, Rectangle2D.Float firstHitbox,
+                                             Rectangle2D.Float secondHitbox, int yTile){
+
+        int firstXTile = (int)firstHitbox.x / Game.TILES_SIZE;
+        int secondXTile = (int) secondHitbox.x /Game.TILES_SIZE;
+
+        if(firstXTile > secondXTile)
+            return IsAllTilesClear(secondXTile, firstXTile, yTile, lvlData); //IGUAL AO isSightClear MAS em vez de dar check se tds os tiles sao walkable usamos o IsAllTilesClear
+        else
+            return IsAllTilesClear(firstXTile, secondXTile, yTile, lvlData);
+
+    }
+
+    public static boolean IsAllTilesClear(int xStart, int xEnd, int y, int[][] lvlData){ //checking se nao ha solid tiles de um ponto para outro pq do shoot do cannon
+        for(int i =0; i<xEnd-xStart; i++)
+            if (IsTileSolid(xStart + i, y, lvlData))
+                return false;
+
+        return true;
+    }
+
     //estamos a dar check em cada TIle que esta enntre o player e o inimigo.
     public static boolean IsAllTilesWalkable (int xStart, int xEnd, int y, int[][] lvlData){
-        for(int i =0; i<xEnd-xStart; i++) {
-            if (IsTileSolid(xStart + i, y, lvlData)) //enctramos algo solid
-                return false;
-            if(!IsTileSolid(xStart+i,y+1,lvlData)) //y+1 para darmos check no tile abaixo ou seja p ver se tem pit ou n!
-                return false;
-        }
+        if(IsAllTilesClear(xStart,xEnd, y, lvlData))
+            for(int i =0; i<xEnd-xStart; i++) {
+                if(!IsTileSolid(xStart+i,y+1,lvlData)) //y+1 para darmos check no tile abaixo ou seja p ver se tem pit ou n!
+                    return false;
+            }
         return true;
     }
 
@@ -160,4 +187,70 @@ public class HelpMethods {
             }
         return new Point(1*Game.TILES_SIZE, 1*Game.TILES_SIZE);
     }
+
+    public static ArrayList<Potion> GetPotions(BufferedImage img){
+        ArrayList<Potion> list = new ArrayList<>();
+
+        for(int j =0; j<img.getHeight();j++)
+            for(int i =0; i<img.getWidth(); i++){
+                Color color = new Color(img.getRGB(i,j));
+                int value = color.getBlue();//usamos o AZUL do pixel para posicionar um POTION LA, a azul tem pixeis diferentes!
+                if(value == RED_POTION || value == BLUE_POTION)
+                    list.add(new Potion(i*Game.TILES_SIZE, j*Game.TILES_SIZE, value));
+
+            }
+        return list;
+    }
+
+
+    public static ArrayList<GameContainer> GetContainers(BufferedImage img){
+        ArrayList<GameContainer> list = new ArrayList<>();
+
+        for(int j =0; j<img.getHeight();j++)
+            for(int i =0; i<img.getWidth(); i++){
+                Color color = new Color(img.getRGB(i,j));
+                int value = color.getBlue();//usamos o AZUL do pixel para posicionar um POTION LA, a azul tem pixeis diferentes! NOS ASSUMIS VALORES DE 1,2,3 PARA CADA PIXEL
+                //valores RGC de azul: 0 => red potion. 1=> blue_potion, 2 => barrel 3 =>box. isto sao as constantes q representam accada tipo de obj
+                if(value == BOX || value == BARREL)
+                    list.add(new GameContainer(i*Game.TILES_SIZE, j*Game.TILES_SIZE, value));
+
+            }
+        return list;
+    }
+
+    public static ArrayList<Spike> GetSpikes(BufferedImage img){
+        ArrayList<Spike> list = new ArrayList<>();
+
+        for(int j =0; j<img.getHeight();j++)
+            for(int i =0; i<img.getWidth(); i++){
+                Color color = new Color(img.getRGB(i,j));
+                int value = color.getBlue();
+                if(value ==SPIKE)
+                    list.add(new Spike(i*Game.TILES_SIZE, j*Game.TILES_SIZE, SPIKE));
+
+            }
+        return list;
+    }
+
+
+    //ir buscar os cannons ao nivel p meter la
+    public static ArrayList<Cannon> GetCannons(BufferedImage img){
+        ArrayList<Cannon> list = new ArrayList<>();
+
+        for(int j =0; j<img.getHeight();j++)
+            for(int i =0; i<img.getWidth(); i++){
+                Color color = new Color(img.getRGB(i,j));
+                int value = color.getBlue(); //valor 5 e 6 no RBG BLUE é p cannoN!
+                if(value ==CANNON_LEFT || value == CANNON_RIGHT)
+                    list.add(new Cannon(i*Game.TILES_SIZE, j*Game.TILES_SIZE, value));
+
+            }
+        return list;
+    }
+
+
+
+
+
+
 }

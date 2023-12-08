@@ -10,6 +10,66 @@ public class Constants {
     public static final  float GRAVITY = 0.04f * Game.SCALE; //qt menor, mais alto o player pode pular
     public static final int ANI_SPEED = 25;
 
+    public static class Projectiles{
+
+        public static final int CANNON_BALL_DEFAULT_WIDTH = 15;
+        public static final int CANNON_BALL_DEFAULT_HEIGHT = 15;
+
+        public static final int CANNON_BALL_WIDTH = (int)(Game.SCALE*CANNON_BALL_DEFAULT_WIDTH);
+        public static final int CANNON_BALL_HEIGHT = (int)(Game.SCALE*CANNON_BALL_DEFAULT_HEIGHT);
+
+        public static final float SPEED = 0.75f * Game.SCALE; //speed do projectile
+
+    }
+
+    public static class ObjectConstants{
+        public static final int RED_POTION =0;
+        public static final int BLUE_POTION =1;
+        public static final int BARREL =2;
+        public static final int BOX =3;
+        public static final int SPIKE =4;
+        public static final int CANNON_LEFT =5; //pq queremos q o cannon aponte p diireita ou esq p dps vermos se ele consegue ver o player ou n
+        public static final int CANNON_RIGHT =6;
+
+        public static final int RED_POTION_VALUE =15; //HEALTH
+        public static final int BLUE_POTION_VALUE =10; //POWER BAR
+
+        public static final int CONTAINER_WIDTH_DEFAULT =40;
+        public static final int CONTAINER_HEIGHT_DEFAULT =30;
+        public static final int CONTAINER_WIDTH =(int)(Game.SCALE * CONTAINER_WIDTH_DEFAULT);
+        public static final int CONTAINER_HEIGHT =(int)(Game.SCALE* CONTAINER_HEIGHT_DEFAULT);
+
+        public static final int POTION_WIDTH_DEFAULT =12;
+        public static final int POTION_HEIGHT_DEFAULT =16;
+        public static final int POTION_WIDTH =(int)(Game.SCALE*POTION_WIDTH_DEFAULT);
+        public static final int POTION_HEIGHT =(int)(Game.SCALE*POTION_HEIGHT_DEFAULT);
+
+        public static final int SPIKE_WIDTH_DEFAULT =32;
+        public static final int SPIKE_HEIGHT_DEFAULT =32;
+        public static final int SPIKE_WIDTH =(int)(Game.SCALE*SPIKE_WIDTH_DEFAULT);
+        public static final int SPIKE_HEIGHT =(int)(Game.SCALE*SPIKE_HEIGHT_DEFAULT);
+
+        public static final int CANNON_WIDTH_DEFAULT =40;
+        public static final int CANNON_HEIGHT_DEFAULT =26;
+        public static final int CANNON_WIDTH =(int)(Game.SCALE*CANNON_WIDTH_DEFAULT);
+        public static final int CANNON_HEIGHT =(int)(Game.SCALE*CANNON_HEIGHT_DEFAULT);
+
+
+        public static int GetSpriteAmount(int object_type){
+            switch (object_type){
+                case RED_POTION,BLUE_POTION: //array d animaçoes return valor d qts tem
+                    return 7;
+                case BARREL,BOX:
+                    return 8;
+                case CANNON_LEFT, CANNON_RIGHT:
+                    return 7; //cannon sprite tem 7 sprites
+            }
+            return 1;
+        }
+
+
+    }
+
     public static class EnemyConstants{
         public static final int CRABBY = 0; //0 é o crab
 

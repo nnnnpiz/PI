@@ -2,6 +2,10 @@ package levels;
 
 import entities.Crabby;
 import main.Game;
+import objects.Cannon;
+import objects.GameContainer;
+import objects.Potion;
+import objects.Spike;
 import utils.LoadSave;
 
 import java.awt.*;
@@ -15,6 +19,12 @@ public class Level {
     private BufferedImage img;
     private int[][] lvlData;
     private ArrayList<Crabby> crabs;
+
+    //LISTAS PARA MANTER OBJETOS ENTRE NIVEIS:
+    private ArrayList<Potion> potions;
+    private ArrayList<GameContainer> containers;
+    private ArrayList<Spike> spikes;
+    private ArrayList<Cannon> cannons;
     private int lvlTilesWide ; //qts tiles tem o lvl em width
     private int maxTilesOffset; //offset de qts tiles conseguimos ver!!
     private int maxLvlOffsetX;
@@ -25,8 +35,28 @@ public class Level {
         this.img = img;
         createLevelData();
         createEnemies();
+        createPotions();
+        createContainers();
+        createSpikes();
+        createCannons();
         calcLvlOffsets();
         calcPlayerSpawn();
+    }
+
+    private void createCannons() {
+        cannons = GetCannons(img);
+    }
+
+    private void createSpikes() {
+        spikes = GetSpikes(img);
+    }
+
+    private void createContainers() {
+        containers = GetContainers(img);
+    }
+
+    private void createPotions() {
+        potions = GetPotions(img);
     }
 
     private void calcPlayerSpawn() {
@@ -65,6 +95,22 @@ public class Level {
 
     public Point getPlayerSpawn(){
         return playerSpawn;
+    }
+
+    public ArrayList<Potion> getPotions(){
+        return potions;
+    }
+
+    public ArrayList<GameContainer> getContainers(){
+        return containers;
+    }
+
+    public ArrayList<Spike> getSpikes(){
+        return spikes;
+    }
+
+    public ArrayList<Cannon> getCannons(){
+        return cannons;
     }
 
 
