@@ -58,10 +58,11 @@ public class EnemyManager {
     public void checkEnemyHit(Rectangle2D.Float attackBox) {
         for (Crabby c : crabbies)
             if(c.isActive())
-                if (attackBox.intersects(c.getHitbox())) { //se der true nos tocamos no inimigo!
-                    c.hurt(10); //TODO aqui so da hit num inimigo mas podiamos ter uma VA que fazia dano para todos na ronda!
-                    return;
-                }
+                if(c.getCurrentHealth() > 0)
+                    if (attackBox.intersects(c.getHitbox())) { //se der true nos tocamos no inimigo!
+                        c.hurt(10); //TODO aqui so da hit num inimigo mas podiamos ter uma VA que fazia dano para todos na ronda!
+                        return;
+                    }
     }
 
     private void loadEnemyImgs(){

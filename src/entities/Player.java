@@ -1,5 +1,6 @@
 package entities;
 
+import audio.AudioPlayer;
 import gamestates.Playing;
 import main.Game;
 import utils.LoadSave;
@@ -51,6 +52,14 @@ public class Player extends Entity{
     //private int currentHealth = maxHealth;
     private int healthWidth = healthBarWidth;
 
+    private int powerBarWidth = (int) (104*Game.SCALE);
+    private int powerBarHeight = (int) (2*Game.SCALE);
+    private int powerBarXStart = (int)(44*Game.SCALE);
+    private int powerBarYStart = (int) (34*Game.SCALE);
+    private int powerWidth = powerBarWidth;
+    private int powerMaxValue = 200;
+    private int powerValue = powerMaxValue;
+
     private int flipX = 0;
     private int flipW = 1;
 
@@ -58,6 +67,12 @@ public class Player extends Entity{
     private Playing playing;
 
     private int tileY=0;
+
+    private boolean powerAttackActive; //check se estamos "durante" um ataque ou nao
+    private int powerAttackTick; //da increase uma vez por "update" se o powerAttack tiver active. qd o Tick chegar a um limite deixamos d fazer o powerAttack
+    private int powerGrowSpeed = 15; //para dar increase no power do player ao longo do tempo (tmb podemos aumentar a barra do power com poçoes azuis)
+    private int powerGrowTick;
+
 
     public Player(float x, float y, int width, int height, Playing playing) {
         super(x, y,width,height);
@@ -80,10 +95,12 @@ public class Player extends Entity{
 
     private void initAttackBox() {
         attackBox = new Rectangle2D.Float(x,y, (int)(20*Game.SCALE), (int)(20*Game.SCALE));
+        resetAttackBox(); //isto da fix no bug da attackbox qd damos spawn
     }
 
     public void update() {
         updateHealthBar();
+        updatePowerBar();
 
         if (currentHealth <= 0){
             if(state != DEAD){ //se estamos "a morrer" damos reeset nas animations. e dps no outro else if é qd ja acabou as animaçoes vamos fzr aparecer o GameOveerOverlay
@@ -91,12 +108,14 @@ public class Player extends Entity{
                 aniTick=0; //mal morrermos nao queremos dar mais update na attackbox nem updatePos, se o player ta moving... se ta atacking etc (metodos abaixo)
                 aniIndex=0;
                 playing.setPlayerDying(true);
+                playing.getGame().getAudioPlayer().playEffect(AudioPlayer.DIE); //death sound
 
             } else if(aniIndex == GetSpriteAmount(DEAD )-1 && aniTick >= ANI_SPEED -1){ //check se o ultimo sprite da animation esta feito
                 playing.setGameOver(true);
+                playing.getGame().getAudioPlayer().stopSong();
+                playing.getGame().getAudioPlayer().playEffect(AudioPlayer.GAMEOVER); //sound d gameover
             } else
                 updateAnimationTick(); //se tivemos entre esses 2 ifs d cima nos damos update na animaçao SO do player
-
             return;
         }
 
@@ -107,9 +126,18 @@ public class Player extends Entity{
             checkPotionTouched();
             checkSpikesTouched();
             tileY =(int)( hitbox.y / Game.TILES_SIZE);
+            if(powerAttackActive){
+                powerAttackTick++;
+                if(powerAttackTick >= 35){
+                    powerAttackTick=0;
+                    powerAttackActive=false;
+                }
+            }
+
         }
-        if(attacking)
+        if(attacking || powerAttackActive)
             checkAttack();
+
         updateAnimationTick();
         setAnimation();
 
@@ -127,15 +155,27 @@ public class Player extends Entity{
         if(attackChecked || aniIndex != 1) //atack é no 1
             return;
         attackChecked=true;
+
+        if(powerAttackActive) //isto faz c q a cada update estamos a ver se ha um ataque na mesma mesmo dps d fazer um powerAttack
+            attackChecked=false;
+
         playing.checkEnemyHit(attackBox);
         playing.checkObjectHit(attackBox); //check se no ataque q ele fez atingiu um barrel ou box
+        playing.getGame().getAudioPlayer().playAttackSound();
     }
 
     private void updateAttackBox() {
-        //left ou right
-        if(right){
+        if(right && left){ //TODO isto foi um fix temporario para um bug onde pressionavamos ambos left e right e a attackbox fica do lado contrario se mantiver um dos botoes pressed. melhor este esparguete
+            if(flipW == 1 ){
+                attackBox.x = hitbox.x + hitbox.width+ (int)(Game.SCALE*10); //attack box follows a hitbox do player + um offset
+            } else {
+                attackBox.x = hitbox.x - hitbox.width- (int)(Game.SCALE*10);
+            }
+
+        } else
+        if(right || (powerAttackActive && flipW == 1)){
             attackBox.x = hitbox.x + hitbox.width+ (int)(Game.SCALE*10); //attack box follows a hitbox do player + um offset
-        }else if(left) {
+        }else if(left || (powerAttackActive && flipW==-1)) {
             attackBox.x = hitbox.x - hitbox.width- (int)(Game.SCALE*10);
         }
         attackBox.y = hitbox.y + (Game.SCALE*10);
@@ -143,6 +183,16 @@ public class Player extends Entity{
 
     private void updateHealthBar() {
         healthWidth = (int)((currentHealth /(float)maxHealth) * healthBarWidth);
+    }
+
+    private void updatePowerBar(){
+        powerWidth = (int)((powerValue / (float)powerMaxValue) * powerBarWidth); //parecido ao updateHealthBar para se o powerValue der shrink a powerBar tmb dar
+
+        powerGrowTick++; //em cada update da increase
+        if(powerGrowTick >= powerGrowSpeed){
+            powerGrowTick =0; //reset do tick
+            changePower(1);
+        }
     }
 
     public void render(Graphics g, int lvlOffset){
@@ -158,9 +208,16 @@ public class Player extends Entity{
 
 
     private void drawUI(Graphics g) {
+        //Background UI
         g.drawImage(statusBarImg, statusBarX, statusBarY, statusBarWidth, statusBarHeight,null);
+
+        //HealthBar UI:
         g.setColor(Color.red);
         g.fillRect(healthBarXStart + statusBarX, healthBarYStart + statusBarY, healthWidth, healthBarHeight);
+
+        //Power bar UI:
+        g.setColor(Color.YELLOW);
+        g.fillRect(powerBarXStart + statusBarX, powerBarYStart + statusBarY, powerWidth, powerBarHeight); //TODO ver teste se powerWidth funciona ou powerBarWidth é o correto p usar no width
     }
 
 
@@ -194,6 +251,13 @@ public class Player extends Entity{
                 state = FALLING;
         }
 
+        if(powerAttackActive){
+            state = ATTACK; //p termos a animaçao correta
+            aniIndex = 1;
+            aniTick = 0;
+            return;
+        }
+
         if(attacking) {
             state = ATTACK; //qd paro o attack animation? qd chega ao ultimo index=> no updateAnimationtick final
             if(startAni != ATTACK){
@@ -222,31 +286,44 @@ public class Player extends Entity{
        // if(!left && !right && !inAir)
        //     return;
         if(!inAir)
-            if((!left && !right) || (right &&left))
-                return;
+            if(!powerAttackActive)
+                if((!left && !right) || (right &&left))
+                    return;
 
 
         float xSpeed=0;
 
         //SE PRESSIONAR LEFT + RIGHT NAO MEXEMOS O X
-        if(left) { //so pressionamos a left
+        if(left && !right) { //so pressionamos a left
             xSpeed -= walkSpeed;
             flipX = width; //para invertermos a img se precisarmos de atacar ou mover p esq
             flipW = -1;
         }
-        if (right) { //so pressionamos right
+        if (right && !left) { //so pressionamos right
             xSpeed += walkSpeed;
             flipX=0;
             flipW=1;
         }
+
+        if(powerAttackActive){
+            if((!left && !right) || (left && right) ){//se nao estamos a carregar em nenhum botao:
+                if(flipW == -1) //se estamos p esq
+                    xSpeed = -walkSpeed; //ataque p esq
+                else
+                    xSpeed = walkSpeed;
+            }
+
+            xSpeed *=3; //se estamos num powerattack vamos mover-nos 3*mais rapido p sitio q estamos a mover nos
+        }
+
+
         if(!inAir){
             if(!IsEntityOnFloor(hitbox, lvlData)){
                 inAir=true;
             }
         }
 
-        if(inAir){
-
+        if(inAir && !powerAttackActive){
             if(CanMoveHere(hitbox.x, hitbox.y + airSpeed, hitbox.width, hitbox.height, lvlData)){
                 hitbox.y+=airSpeed;
                 airSpeed +=GRAVITY;
@@ -271,6 +348,7 @@ public class Player extends Entity{
     private void jump() {
         if(inAir)
             return;
+        playing.getGame().getAudioPlayer().playEffect(AudioPlayer.JUMP);
         inAir=true;
         airSpeed=jumpSpeed;
     }
@@ -285,6 +363,10 @@ public class Player extends Entity{
                 hitbox.x += xSpeed;
         } else { //colisao:
             hitbox.x =GetEntityXPosNextToWall(hitbox, xSpeed);
+            if(powerAttackActive){ //parar o powerAttack se tiver uma parede a frente
+                powerAttackActive=false;
+                powerAttackTick=0;
+            }
         }
     }
 
@@ -302,8 +384,13 @@ public class Player extends Entity{
         currentHealth=0;
     }
 
-    public void changePower(int value){
-        System.out.println("added power");
+    public void changePower(int value){ //parecido ao changehealth
+        powerValue +=value;
+        if(powerValue >= powerMaxValue)
+            powerValue = powerMaxValue;
+        else if(powerValue <= 0)
+            powerValue=0;
+
     }
 
     private void loadAnimations() {
@@ -359,14 +446,25 @@ public class Player extends Entity{
         inAir=false;
         attacking=false;
         moving=false;
+        airSpeed=0f;
         state=IDLE;
         currentHealth=maxHealth;
 
         hitbox.x=x;
         hitbox.y=y;
+        resetAttackBox();
 
         if(!IsEntityOnFloor(hitbox,lvlData))
             inAir=true;
+
+    }
+
+    private void resetAttackBox(){
+        if(flipW == 1 ){
+            attackBox.x = hitbox.x + hitbox.width+ (int)(Game.SCALE*10); //attack box follows a hitbox do player + um offset
+        } else {
+            attackBox.x = hitbox.x - hitbox.width- (int)(Game.SCALE*10);
+        }
 
     }
 
@@ -375,4 +473,12 @@ public class Player extends Entity{
     }
 
 
+    public void powerAttack() {
+        if(powerAttackActive)
+            return;
+        if(powerValue >= 60) { //custa 60 de power para fazer um power attack TODO mudar?
+            powerAttackActive=true;
+            changePower(-60);
+        }
+    }
 }

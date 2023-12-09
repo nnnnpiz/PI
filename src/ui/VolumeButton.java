@@ -16,6 +16,7 @@ public class VolumeButton extends PauseButton{
     private boolean mouseOver, mousePressed;
     private int buttonX; //botao do slider
     private int minX, maxX; //slider start / end positions
+    private float floatValue = 0f;
 
     public VolumeButton(int x, int y, int width, int height) {
         super(x+width/2, y, VOLUME_WIDTH, height); //x+width/2 p começar com o slider no meio!
@@ -63,8 +64,16 @@ public class VolumeButton extends PauseButton{
         else
             buttonX= x;
 
+        updateFloatValue();
         bounds.x = buttonX-VOLUME_WIDTH/2;
 
+    }
+
+    //depende da pos do buttonX
+    private void updateFloatValue() {
+        float range = maxX - minX;
+        float value = buttonX - minX;
+        floatValue = value/range;
     }
 
     public void resetBools(){ //qd sairmos do button p dar reset no mouseOver e pressed
@@ -86,6 +95,10 @@ public class VolumeButton extends PauseButton{
 
     public void setMousePressed(boolean mousePressed) {
         this.mousePressed = mousePressed;
+    }
+
+    public float getFloatValue(){
+        return floatValue;
     }
 
 }

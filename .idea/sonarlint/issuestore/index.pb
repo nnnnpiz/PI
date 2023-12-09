@@ -81,3 +81,5 @@ H
 src/ui/AudioOptions.java,4\6\46851ebb8beb2d7d57c60bcad7482b1ab714e36b
 O
 src/gamestates/GameOptions.java,0\4\0400557f6f74acd5d7cf1ba0dbbca904f73c5ff6
+J
+src/audio/AudioPlayer.java,1\0\109124dbac2fea0d298898a13f12378ad860b959

@@ -62,9 +62,9 @@ public class Playing extends State implements Statemethods{
     }
 
     public void loadNextLevel(){
-        resetAll();
         levelManager.loadNextLevel();
         player.setSpawn(levelManager.getCurrentLevel().getPlayerSpawn()); //new spawn position p novo level!
+        resetAll();
     }
 
     private void loadStartLevel() {
@@ -206,9 +206,12 @@ public class Playing extends State implements Statemethods{
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        if(!gameOver)
+        if(!gameOver){
             if(e.getButton() == MouseEvent.BUTTON1)
                 player.setAttacking(true);
+            else if(e.getButton() == MouseEvent.BUTTON3) //button3 é o direito. button2 => mouse wheel button
+                player.powerAttack();
+        }
     }
 
     @Override
@@ -298,6 +301,8 @@ public class Playing extends State implements Statemethods{
 
     public void setLevelCompleted(boolean levelCompleted){
         this.lvlCompleted = levelCompleted;
+        if(levelCompleted)
+            game.getAudioPlayer().lvlCompleted(); //sound effect p level completed
     }
     public void setMaxLvlOffset(int lvlOffset){
         this.maxLvlOffsetX = lvlOffset;

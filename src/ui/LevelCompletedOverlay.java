@@ -74,13 +74,15 @@ public class LevelCompletedOverlay {
         if(isIn(menu, e)) {
             if (menu.isMousePressed()){
                 playing.resetAll();
-                Gamestate.state=Gamestate.MENU;
+                playing.setGameState(Gamestate.MENU);
             }
 
         }
         else if(isIn(next,e)) {
-            if (next.isMousePressed())
+            if (next.isMousePressed()) {
                 playing.loadNextLevel(); //qd pressionamos no NEXT damos LoadNextLevel que incrementa o index do level e vai p outro faz load enemies etcetc
+                playing.getGame().getAudioPlayer().setLevelSong(playing.getLevelManager().getLvlIndex()); //mudamos a musica se vamos p outro nivel
+            }
         }
 
         menu.resetBools();
