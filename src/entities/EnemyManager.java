@@ -44,7 +44,7 @@ public class EnemyManager {
             }
         //TODO DESCOMENTAR ISTO PARA TER SEGUIMENTO DE NIVEIS!1111111111111111111111111 MUDAR ISTO PARA TALVEZ DIFERENCIAR RONDAS
         //if(!isAnyActive)
-          //  playing.setLevelCompleted(true);
+          //playing.setLevelCompleted(true);
     }
 
     public void draw(Graphics g, int xLvlOffset){
