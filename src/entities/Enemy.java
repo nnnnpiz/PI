@@ -1,4 +1,5 @@
 package entities;
+import gamestates.Playing;
 import main.Game;
 
 import java.awt.geom.Rectangle2D;
@@ -23,12 +24,20 @@ public abstract class Enemy extends  Entity{
     protected boolean active=true; //enemy esta ativo
     protected boolean attackChecked;
 
+
     public Enemy(float x, float y, int width, int height, int enemyType) {
         super(x, y, width, height);
         this.enemyType=enemyType;
         maxHealth = GetMaxHealth(enemyType); //vida dod crab
         currentHealth = maxHealth;
         walkSpeed = Game.SCALE * 0.35f; //TODO MUDAR ISTO PARA VA, speed do inimigo
+    }
+
+    protected void inAirChecks(int[][] lvlData, Playing playing) {
+        if (state != HIT && state != DEAD) {
+            updateInAir(lvlData);
+            playing.getObjectManager().checkSpikesTouched(this);
+        }
     }
 
     protected void firstUpdateCheck(int[][] lvlData){

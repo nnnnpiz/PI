@@ -72,6 +72,8 @@ public class Constants {
 
     public static class EnemyConstants{
         public static final int CRABBY = 0; //0 é o crab
+        public static final int PINKSTAR=1;
+        public static final int SHARK = 2;
 
         public static final int IDDLE = 0;
         public static final int RUNNING = 1;
@@ -88,30 +90,42 @@ public class Constants {
         public static final int CRABBY_DRAWOFFSET_X = (int)(26 *Game.SCALE);
         public static final int CRABBY_DRAWOFFSET_Y = (int)(9 *Game.SCALE);
 
+        public static final int SHARK_WIDTH_DEFAULT = 34;
+        public static final int SHARK_HEIGHT_DEFAULT = 30;
+        public static final int SHARK_WIDTH = (int) (SHARK_WIDTH_DEFAULT * Game.SCALE);
+        public static final int SHARK_HEIGHT = (int) (SHARK_HEIGHT_DEFAULT * Game.SCALE);
+        public static final int SHARK_DRAWOFFSET_X = (int) (8 * Game.SCALE);
+        public static final int SHARK_DRAWOFFSET_Y = (int) (6 * Game.SCALE);
+
         public static int GetSpriteAmount(int enemy_type, int enemy_state){
 
-            switch (enemy_type){
-                case CRABBY:
-                    switch(enemy_state){
-                        case IDDLE:
-                            return 9;
-                        case RUNNING:
-                            return 6;
-                        case ATTACK:
-                            return 7;
-                        case HIT:
-                            return 4;
-                        case DEAD:
-                            return 5;
-                    }
+            switch (enemy_state) {
+                case IDDLE: {
+                    if (enemy_type == CRABBY)
+                        return 9;
+                    else if (enemy_type == PINKSTAR || enemy_type == SHARK)
+                        return 8;
+                }
+                case RUNNING:
+                    return 6;
+                case ATTACK:
+                    if (enemy_type == SHARK)
+                        return 8;
+                    return 7;
+                case HIT:
+                    return 4;
+                case DEAD:
+                    return 5;
             }
             return 0;
         }
 
         public static int GetMaxHealth(int enemy_type){
-            switch (enemy_type){
+            switch (enemy_type) {
                 case CRABBY:
-                    return 10;
+                    return 50;  //TODO MUDAR ISTO MAYBE
+                case PINKSTAR, SHARK:
+                    return 25;
                 default:
                     return 1;
             }
@@ -119,9 +133,13 @@ public class Constants {
 
         //este valor returned é sent para o changeHealthplayer para dar dano no jogador no caso da hitbox do Crab tocar na nossa!
         public static int GetEnemyDmg(int enemy_type){
-            switch (enemy_type){
+            switch (enemy_type) {
                 case CRABBY:
                     return 15;
+                case PINKSTAR:
+                    return 20;
+                case SHARK:
+                    return 25;
                 default:
                     return 0;
             }

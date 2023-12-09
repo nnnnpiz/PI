@@ -1,6 +1,7 @@
 package utils;
 
 import entities.Crabby;
+import entities.Shark;
 import main.Game;
 import objects.*;
 
@@ -10,6 +11,7 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 import static utils.Constants.EnemyConstants.CRABBY;
+import static utils.Constants.EnemyConstants.SHARK;
 import static utils.Constants.ObjectConstants.*;
 
 public class HelpMethods {
@@ -164,13 +166,27 @@ public class HelpMethods {
 
     public static ArrayList<Crabby> GetCrabs(BufferedImage img){
         ArrayList<Crabby> list = new ArrayList<>();
-
+       // list.add(new Crabby(200*Game.TILES_SIZE, 200*Game.TILES_SIZE));
         for(int j =0; j<img.getHeight();j++)
             for(int i =0; i<img.getWidth(); i++){
                 Color color = new Color(img.getRGB(i,j));       //TODO VVAMOS METER UMA V.A DE GERAR INIMIIGOS AQUI
                 int value = color.getGreen();//usamos o GREEN do pixel para posicionar um inimigo la
                 if(value == CRABBY) //se value == 0 ou seja é um CRABBY
                     list.add(new Crabby(i*Game.TILES_SIZE, j*Game.TILES_SIZE)); //adicionamos um CRABBY nessa posiçao p meter na lista! crabbies com posiçoes
+            }
+        return list;
+    }
+
+    public static ArrayList<Shark> GetSharks(BufferedImage img){
+        ArrayList<Shark> list = new ArrayList<>();
+        list.add(new Shark(250, 200));
+
+        for(int j =0; j<img.getHeight();j++)
+            for(int i =0; i<img.getWidth(); i++){
+                Color color = new Color(img.getRGB(i,j));       //TODO VVAMOS METER UMA V.A DE GERAR INIMIIGOS AQUI
+                int value = color.getGreen();//usamos o GREEN do pixel para posicionar um inimigo la
+                if(value == SHARK) //se value == 0 ou seja é um CRABBY
+                    list.add(new Shark(i*Game.TILES_SIZE, j*Game.TILES_SIZE));
             }
         return list;
     }

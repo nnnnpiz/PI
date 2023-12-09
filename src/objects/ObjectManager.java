@@ -1,5 +1,6 @@
 package objects;
 
+import entities.Enemy;
 import entities.Player;
 import gamestates.Playing;
 import levels.Level;
@@ -41,6 +42,12 @@ public class ObjectManager {
         for(Spike s:spikes)
             if(s.getHitbox().intersects(p.getHitbox()))
                 p.kill();
+    }
+
+    public void checkSpikesTouched(Enemy e) {
+        for (Spike s : spikes)
+            if (s.getHitbox().intersects(e.getHitbox()))
+                e.hurt(200);
     }
 
 
