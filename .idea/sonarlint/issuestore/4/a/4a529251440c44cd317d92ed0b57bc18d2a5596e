@@ -1,0 +1,51 @@
+
+`
+java:S6208ì"CMerge the previous cases into this one using comma-separated label.(±¶ûp8×öÿ®Å1
+r	java:S117;"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹ú¦ôıÿÿÿÿ8Øöÿ®Å1
+r	java:S117k"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØúïÛıÿÿÿÿ8Øöÿ®Å1
+r	java:S117k"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØúïÛıÿÿÿÿ8Øöÿ®Å1
+n	java:S117‚"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Â˜¿8Øöÿ®Å1
+s	java:S117‘"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òŒÌşÿÿÿÿ8Øöÿ®Å1
+s	java:S117à"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒ•¶œøÿÿÿÿ8Øöÿ®Å1
+\
+java:S1118	":Add a private constructor to hide the implicit public one.(“³±ûÿÿÿÿ8ßöÿ®Å1
+W
+java:S1118":Add a private constructor to hide the implicit public one.(à·À8àöÿ®Å1
+W
+java:S1118":Add a private constructor to hide the implicit public one.(ƒÒÇ8áöÿ®Å1
+o	java:S100;"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹ú¦ôıÿÿÿÿ8áöÿ®Å1
+>	java:S131<""Add a default case to this switch.(‰ô›™8áöÿ®Å1
+{	java:S115f"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(æ²ˆÙüÿÿÿÿ8áöÿ®Å1
+{	java:S115g"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ª½Êûÿÿÿÿ8áöÿ®Å1
+{	java:S115h"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¥•êÀøÿÿÿÿ8áöÿ®Å1
+v	java:S115i"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(´ÒÉõ8áöÿ®Å1
+\
+java:S1118J":Add a private constructor to hide the implicit public one.(İö ±ÿÿÿÿÿ8âöÿ®Å1
+O
+java:S1135e"2Complete the task associated to this TODO comment.(‡€à™8ãöÿ®Å1
+o	java:S100k"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØúïÛıÿÿÿÿ8ãöÿ®Å1
+h	java:S128n"LEnd this switch case with an unconditional break, return or throw statement.(µó ÷8ãöÿ®Å1
+>	java:S131m""Add a default case to this switch.(ı‰ı¡8ãöÿ®Å1
+k	java:S100‚"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Â˜¿8ãöÿ®Å1
+P
+java:S1135‚"2Complete the task associated to this TODO comment.(Â˜¿8äöÿ®Å1
+p	java:S100‘"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òŒÌşÿÿÿÿ8äöÿ®Å1
+]
+java:S1118Ÿ":Add a private constructor to hide the implicit public one.(”’¬æıÿÿÿÿ8åöÿ®Å1
+]
+java:S1118«":Add a private constructor to hide the implicit public one.(ôˆÚ‘ûÿÿÿÿ8åöÿ®Å1
+]
+java:S1118¬":Add a private constructor to hide the implicit public one.(ÈĞ‘ıÿÿÿÿ8åöÿ®Å1
+X
+java:S1118³":Add a private constructor to hide the implicit public one.(…¸¼õ8æöÿ®Å1
+X
+java:S1118¹":Add a private constructor to hide the implicit public one.(µ€‘¥8æöÿ®Å1
+]
+java:S1118¿":Add a private constructor to hide the implicit public one.(ô©û­øÿÿÿÿ8æöÿ®Å1
+]
+java:S1118Ì":Add a private constructor to hide the implicit public one.(ú‰„ãşÿÿÿÿ8çöÿ®Å1
+]
+java:S1118Ó":Add a private constructor to hide the implicit public one.(¡Ê÷´üÿÿÿÿ8çöÿ®Å1
+p	java:S100à"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒ•¶œøÿÿÿÿ8çöÿ®Å1
+K
+java:S1128")Remove this unused import 'levels.Level'.(à¸÷­úÿÿÿÿ8ªÄŒ¯Å1

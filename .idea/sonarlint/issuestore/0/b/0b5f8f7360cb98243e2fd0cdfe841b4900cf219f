@@ -1,0 +1,25 @@
+
+’
+java:S1319k"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(½·Üóÿÿÿÿÿ8ÕË¯Å1
+
+java:S1319o"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Ì©ÿà8ÕË¯Å1
+
+java:S1319w"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¹üÜÑ8ÕË¯Å1
+
+java:S1319{"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Ï«´ˆ8ÕË¯Å1
+’
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(šÔ…®üÿÿÿÿ8ÕË¯Å1
+“
+java:S1319ƒ"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ç¦ä¾ùÿÿÿÿ8ÕË¯Å1
+{
+java:S1104$"YMake lvlDifficulty a static final constant or non-public and provide accessors if needed.(ÇÌ×üÿÿÿÿ8ƒè¯Å1
+U
+java:S1444$"3Make this "public static lvlDifficulty" field final(ÇÌ×üÿÿÿÿ8ƒè¯Å1
+}
+java:S1450"[Remove the "lvlTilesWide" field and declare it as a local variable in the relevant methods.(¡„øıÿÿÿÿ8¢ÕË¯Å1
+y
+java:S1450 "]Remove the "maxTilesOffset" field and declare it as a local variable in the relevant methods.(Å¬8¢ÕË¯Å1
+S
+java:S2696,"6Make the enclosing method "static" or remove this set.(ÄïÑÓ8ìâè¯Å1
+G
+java:S30101"*Remove this assignment of "lvlDifficulty".(İ¡²ï8è¯Å1

@@ -24,6 +24,21 @@ public class EnemyManager {
 
     }
 
+    public ArrayList<Crabby> getCrabbies() {
+        return crabbies;
+    }
+
+    public ArrayList<Shark> getSharksies() {
+        return sharks;
+    }
+
+    public void killAll(){
+        for ( Crabby c : crabbies)
+            c.hurt(c.getCurrentHealth());
+        for ( Shark s : sharks)
+            s.hurt(s.getCurrentHealth());
+    }
+
     public void loadEnemies(Level level) {
         crabbies = level.getCrabs();
         sharks = level.getSharks();
@@ -42,9 +57,13 @@ public class EnemyManager {
                 s.update(lvlData, player);
                 isAnyActive=true;
             }
+
         //TODO DESCOMENTAR ISTO PARA TER SEGUIMENTO DE NIVEIS!1111111111111111111111111 MUDAR ISTO PARA TALVEZ DIFERENCIAR RONDAS
-        //if(!isAnyActive)
-          //playing.setLevelCompleted(true);
+        if(!isAnyActive) {
+            //playing.setLevelCompleted(true);
+
+
+        }
     }
 
     public void draw(Graphics g, int xLvlOffset){

@@ -1,0 +1,14 @@
+
+b
+java:S1659"@Declare "bgY" and all following declarations on a separate line.(¦ñ¤üÿÿÿÿ8Õ…¹ÎÄ1
+f
+java:S1659"DDeclare "replayB" and all following declarations on a separate line.(§”Õ”øÿÿÿÿ8Õ…¹ÎÄ1
+X	java:S125b"<This block of commented-out lines of code should be removed.(ĞÔğİ8“Ü€×Ä1
+Q
+java:S1128	"4Remove this unused import 'java.awt.event.KeyEvent'.(¬ğİÍ8ÒÀÃÎÄ1
+i
+java:S1128"GRemove this unused import 'utils.Constants.UI.PauseButtons.SOUND_SIZE'.(¬ïÇÉüÿÿÿÿ8ÒÀÃÎÄ1
+l
+java:S1128"JRemove this unused import 'utils.Constants.UI.VolumeButtons.SLIDER_WIDTH'.(Æ±İÈúÿÿÿÿ8ÒÀÃÎÄ1
+g
+java:S1128"KRemove this unused import 'utils.Constants.UI.VolumeButtons.VOLUME_HEIGHT'.(›î©28ÒÀÃÎÄ1

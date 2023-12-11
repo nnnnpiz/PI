@@ -1,5 +1,6 @@
 package entities;
 
+import levels.Level;
 import main.Game;
 
 import java.awt.*;

@@ -1,5 +1,6 @@
 package utils;
 
+import levels.Level;
 import main.Game;
 
 /*
@@ -97,6 +98,12 @@ public class Constants {
         public static final int SHARK_DRAWOFFSET_X = (int) (8 * Game.SCALE);
         public static final int SHARK_DRAWOFFSET_Y = (int) (6 * Game.SCALE);
 
+        //TODO nb
+        public static final int LVL_DIFFICUlTY_0 =0;
+        public static final int LVL_DIFFICUlTY_1 =1;
+        public static final int LVL_DIFFICUlTY_2 =2;
+        public static final int LVL_DIFFICUlTY_3 =3;
+
         public static int GetSpriteAmount(int enemy_type, int enemy_state){
 
             switch (enemy_state) {
@@ -120,15 +127,18 @@ public class Constants {
             return 0;
         }
 
-        public static int GetMaxHealth(int enemy_type){
+        public static int GetMaxHealth(int enemy_type){//TODO MUDAR ISTO MAYBE PARA USAR O GENERATERNDDISCRETE2
+
+
             switch (enemy_type) {
                 case CRABBY:
-                    return 50;  //TODO MUDAR ISTO MAYBE PARA USAR O GENERATERNDDISCRETE2
+                    return 50;
                 case PINKSTAR, SHARK:
                     return 25;
                 default:
                     return 1;
             }
+
         }
 
         //este valor returned é sent para o changeHealthplayer para dar dano no jogador no caso da hitbox do Crab tocar na nossa!

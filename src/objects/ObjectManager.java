@@ -1,5 +1,6 @@
 package objects;
 
+import Probabilities.Probability;
 import entities.Enemy;
 import entities.Player;
 import gamestates.Playing;
@@ -70,6 +71,7 @@ public class ObjectManager {
             playing.getPlayer().changePower(BLUE_POTION_VALUE);
     }
 
+    /*
     public void checkObjectHit(Rectangle2D.Float attackbox){ //para os GameCOntainers( box e barrel)
         for(GameContainer gc:containers)
             if(gc.isActive() && !gc.doAnimation){
@@ -85,7 +87,30 @@ public class ObjectManager {
                     return;
                 }
             }
+    }
 
+     */
+
+    public void checkObjectHit(Rectangle2D.Float attackbox){ //para os GameCOntainers( box e barrel)
+        for(GameContainer gc:containers)
+            if(gc.isActive() && !gc.doAnimation){
+                if(gc.getHitbox().intersects(attackbox)){
+                    gc.setAnimation(true); //hitted foi destruido vamos animar!
+                    //dropa um item ccacda objeto:
+                    int type= Probability.halfRandomPotion();
+                    System.out.println(type);
+                    //TODO IMPLEMENTAR AQUI VA'S DOS ITEMS Q SAI NO BARREL OU BOX! AQUI SE O OBJTYPE HITTED É UM BARREL VOU ADICIONAR UMA POTION NOVA QUE VAI DROPAR COM O 1. E 1=BLUE_POTION
+                    if ( type==-1) {
+                        return;
+                    }else if( type<2 ) {
+                        potions.add(new Potion((int) (gc.getHitbox().x + gc.getHitbox().width / 2),
+                                (int) (gc.getHitbox().y - gc.getHitbox().height / 2),
+                                type)); //adicionar novo item q vou dropar a lista de potions
+                    }else
+                        playing.getEnemyManager().killAll();
+                    return;
+                }
+            }
     }
 
 

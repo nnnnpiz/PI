@@ -13,6 +13,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
+import static Probabilities.Probability.GenerateLvlDifficulty;
 import static utils.HelpMethods.*;
 
 public class Level {
@@ -32,9 +33,20 @@ public class Level {
     private int maxLvlOffsetX;
     private Point playerSpawn;
 
+    public static int lvlDifficulty;
+
+    //dificuldade atual da ronda:
+    public int getLvlDifficulty() {
+        return lvlDifficulty;
+    }
+
+    public void setLvlDifficulty(int lvlDifficulty) {
+        Level.lvlDifficulty = lvlDifficulty;
+    }
 
     public Level(BufferedImage img){
         this.img = img;
+        lvlDifficulty = GenerateLvlDifficulty();
         createLevelData();
         createEnemies();
         createPotions();

@@ -1,5 +1,6 @@
 package entities;
 import gamestates.Playing;
+import levels.Level;
 import main.Game;
 
 import java.awt.geom.Rectangle2D;
@@ -28,9 +29,54 @@ public abstract class Enemy extends  Entity{
     public Enemy(float x, float y, int width, int height, int enemyType) {
         super(x, y, width, height);
         this.enemyType=enemyType;
-        maxHealth = GetMaxHealth(enemyType); //vida dod crab
+        maxHealth = GetMaxHealthV2(enemyType); //vida dod crab
         currentHealth = maxHealth;
         walkSpeed = Game.SCALE * 0.35f; //TODO MUDAR ISTO PARA VA, speed do inimigo
+    }
+
+    protected int GetMaxHealthV2(int enemy_type){
+        if(enemy_type == CRABBY && Level.lvlDifficulty == LVL_DIFFICUlTY_3)
+            return 200;
+        if(enemy_type == CRABBY && Level.lvlDifficulty == LVL_DIFFICUlTY_2)
+            return 80;
+        if(enemy_type == CRABBY && Level.lvlDifficulty == LVL_DIFFICUlTY_1)
+            return 20;
+        if(enemy_type == CRABBY && Level.lvlDifficulty == LVL_DIFFICUlTY_0)
+            return 10;
+
+        if(enemy_type == SHARK  && Level.lvlDifficulty == LVL_DIFFICUlTY_3)
+            return 200;
+        if( enemy_type == SHARK && Level.lvlDifficulty == LVL_DIFFICUlTY_2)
+            return 80;
+        if(enemy_type == SHARK && Level.lvlDifficulty == LVL_DIFFICUlTY_1)
+            return 20;
+        if(enemy_type == SHARK && Level.lvlDifficulty == LVL_DIFFICUlTY_0)
+            return 10;
+        else
+            return 0;
+    }
+
+    protected int GetEnemyDmgV2(int enemyType){
+        if(enemyType == CRABBY && Level.lvlDifficulty == LVL_DIFFICUlTY_3)
+            return 80;
+        if(enemyType == CRABBY && Level.lvlDifficulty == LVL_DIFFICUlTY_2)
+            return 40;
+        if(enemyType == CRABBY && Level.lvlDifficulty == LVL_DIFFICUlTY_1)
+            return 20;
+        if(enemyType == CRABBY && Level.lvlDifficulty == LVL_DIFFICUlTY_0)
+            return 10;
+
+        if(enemyType == SHARK && Level.lvlDifficulty == LVL_DIFFICUlTY_3)
+            return 80;
+        if(enemyType == SHARK && Level.lvlDifficulty == LVL_DIFFICUlTY_2)
+            return 40;
+        if(enemyType ==SHARK && Level.lvlDifficulty == LVL_DIFFICUlTY_1)
+            return 20;
+        if(enemyType ==SHARK && Level.lvlDifficulty == LVL_DIFFICUlTY_0)
+            return 10;
+        else
+            return 0;
+
     }
 
     protected void inAirChecks(int[][] lvlData, Playing playing) {
@@ -119,7 +165,7 @@ public abstract class Enemy extends  Entity{
 
     protected void checkEnemyHit(Rectangle2D.Float attackBox,Player player) {
         if(attackBox.intersects(player.hitbox))
-            player.changeHealth(-GetEnemyDmg(enemyType));
+            player.changeHealth(-GetEnemyDmgV2(enemyType));
         attackChecked = true;
     }
 

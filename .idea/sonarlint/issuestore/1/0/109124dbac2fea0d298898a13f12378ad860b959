@@ -1,0 +1,67 @@
+
+n
+java:S1104"RMake MENU_1 a static final constant or non-public and provide accessors if needed.(ˆ÷Êm8Íó…ÔÄ1
+p
+java:S1104"SMake LEVEL_1 a static final constant or non-public and provide accessors if needed.(ÂèĞ¿8Íó…ÔÄ1
+u
+java:S1104"SMake LEVEL_2 a static final constant or non-public and provide accessors if needed.(³€Âÿÿÿÿÿ8±¹ˆÔÄ1
+q
+java:S1104"OMake DIE a static final constant or non-public and provide accessors if needed.(é§Šáøÿÿÿÿ8Íó…ÔÄ1
+m
+java:S1104"PMake JUMP a static final constant or non-public and provide accessors if needed.(ğï›Ò8Íó…ÔÄ1
+q
+java:S1104"TMake GAMEOVER a static final constant or non-public and provide accessors if needed.(ÿ“½¢8Íó…ÔÄ1
+{
+java:S1104"YMake LVL_COMPLETED a static final constant or non-public and provide accessors if needed.(¨ÿäğüÿÿÿÿ8Íó…ÔÄ1
+r
+java:S1104"VMake ATTACK_ONE a static final constant or non-public and provide accessors if needed.(Å¿ÍQ8Íó…ÔÄ1
+x
+java:S1104 "VMake ATTACK_TWO a static final constant or non-public and provide accessors if needed.(òÙî»ÿÿÿÿÿ8Íó…ÔÄ1
+z
+java:S1104!"XMake ATTACK_THREE a static final constant or non-public and provide accessors if needed.(¡Ë™øÿÿÿÿ8±¹ˆÔÄ1
+H
+java:S1444",Make this "public static MENU_1" field final(ˆ÷Êm8Íó…ÔÄ1
+J
+java:S1444"-Make this "public static LEVEL_1" field final(ÂèĞ¿8Íó…ÔÄ1
+O
+java:S1444"-Make this "public static LEVEL_2" field final(³€Âÿÿÿÿÿ8±¹ˆÔÄ1
+K
+java:S1444")Make this "public static DIE" field final(é§Šáøÿÿÿÿ8Íó…ÔÄ1
+G
+java:S1444"*Make this "public static JUMP" field final(ğï›Ò8Íó…ÔÄ1
+K
+java:S1444".Make this "public static GAMEOVER" field final(ÿ“½¢8Íó…ÔÄ1
+U
+java:S1444"3Make this "public static LVL_COMPLETED" field final(¨ÿäğüÿÿÿÿ8Íó…ÔÄ1
+L
+java:S1444"0Make this "public static ATTACK_ONE" field final(Å¿ÍQ8Íó…ÔÄ1
+R
+java:S1444 "0Make this "public static ATTACK_TWO" field final(òÙî»ÿÿÿÿÿ8Íó…ÔÄ1
+T
+java:S1444!"2Make this "public static ATTACK_THREE" field final(¡Ë™øÿÿÿÿ8±¹ˆÔÄ1
+m
+java:S3008"QRename this field "MENU_1" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ÷Êm8Øó…ÔÄ1
+o
+java:S3008"RRename this field "LEVEL_1" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂèĞ¿8Øó…ÔÄ1
+t
+java:S3008"RRename this field "LEVEL_2" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³€Âÿÿÿÿÿ8Æ¹ˆÔÄ1
+p
+java:S3008"NRename this field "DIE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é§Šáøÿÿÿÿ8Øó…ÔÄ1
+l
+java:S3008"ORename this field "JUMP" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğï›Ò8Øó…ÔÄ1
+p
+java:S3008"SRename this field "GAMEOVER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ“½¢8Øó…ÔÄ1
+z
+java:S3008"XRename this field "LVL_COMPLETED" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨ÿäğüÿÿÿÿ8Øó…ÔÄ1
+q
+java:S3008"URename this field "ATTACK_ONE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Å¿ÍQ8Øó…ÔÄ1
+w
+java:S3008 "URename this field "ATTACK_TWO" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òÙî»ÿÿÿÿÿ8Øó…ÔÄ1
+y
+java:S3008!"WRename this field "ATTACK_THREE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡Ë™øÿÿÿÿ8Æ¹ˆÔÄ1
+G
+java:S1659#"%Declare "effects" on a separate line.(¢¾âùÿÿÿÿ8Æ¹ˆÔÄ1
+E
+java:S1659&"(Declare "effectMute" on a separate line.(°ÉàÊ8Æ¹ˆÔÄ1
+O
+java:S1135b"2Complete the task associated to this TODO comment.(ğë–Ç8˜ş›ÔÄ1

@@ -1,0 +1,12 @@
+
+t
+java:S3776)"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(Ü¼‚¿üÿÿÿÿ8•²©¯Å1
+>	java:S1310""Add a default case to this switch.(þ™ÅÞ8¶Éç²Å1
+K
+java:S1128")Remove this unused import 'levels.Level'.(à¸÷­úÿÿÿÿ8·Éç²Å1
+B
+java:S1128"%Remove this unused import 'java.awt'.(ï´µ©8·Éç²Å1
+X
+java:S1128	";Remove this unused import 'utils.Constants.Direction.LEFT'.(˜Ñ–ñ8·Éç²Å1
+J
+java:S1128".Remove this unused import 'utils.HelpMethods'.(è§†8·Éç²Å1

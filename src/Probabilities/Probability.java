@@ -5,10 +5,11 @@ public class Probability {
 
         private static Random random = new Random();
 
-        /* Probabilidade de ocorrer um evento especial: TODO "NUVEM" rara que mata todos os inimigos vivos (isActive());
+        /* Probabilidade de ocorrer um evento especial: TODO "NUVEM" rara que aparece no ceu ...
         mean = 100
         std_dev = 35
         OU
+
         Probabilidade de um item/powerup aparecer => TODO probabilidade de uma caixa que tem ITEMS dar spawn
         mean = 50
         std_dev = 20
@@ -40,7 +41,8 @@ public class Probability {
         TODO Probabilidade de uma ronda ter um nivel diferente de dificuldade:
         TODO ha 4 niveis de dificuldade. => influencia vida e dano que os adversarios dao e a quantidade de adversarios
          */
-        public static int generateRndDiscrete2() {
+        //Gera o nivel de dificuldade da ronda. Muda esse nivel de dif de ronda a ronda. smp q começa uma ronda nova damos setDifficulty desse novo nr gerado para a dificuldade
+        public static int GenerateLvlDifficulty(){
             int[] vals = {0,1,2,3};
             double var = random.nextDouble();
             if ( var >= 0 && var <0.7)
@@ -54,21 +56,23 @@ public class Probability {
         }
 
         /*
-        TODO Probabilidade de geração de um item de powerup:
+        TODO DONE!////////////////////////////////////////////////////
         o vals[0] é uma opçao onde partimos o bau e nao sai nenhum item de preposito...
          */
-        public static int generateRndDiscrete3() {
-            int[] vals = {1,2,3,4};
+        public static int halfRandomPotion() {
+            int[] vals = {2,0,1,-1};
             double var = random.nextDouble();
             if ( var >=0 && var <0.05)
-                return vals[1];
+                return vals[0];
             if ( var >= 0.05 && var <0.45)
-                return vals[2];
+                return vals[1];
             if ( var >= 0.45 && var <0.8)
                 return vals[2];
             else
                 return vals[3];
         }
+        //TODO ///////////////////////////////////////////////////////
+
 
         //TODO:
         /*FALTA A DE Distrib POISSON:

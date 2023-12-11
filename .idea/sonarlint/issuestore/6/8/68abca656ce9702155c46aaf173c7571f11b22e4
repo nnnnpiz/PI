@@ -1,0 +1,14 @@
+
+‡
+java:S4165Ò"iRemove this useless assignment; "playerDying" already holds the assigned value along all execution paths.(¹Àù8·ùÙİÄ1
+b
+java:S1659)"EDeclare "bigCloud" and all following declarations on a separate line.(ö»’8¹ùÙİÄ1
+]	java:S125}"<This block of commented-out lines of code should be removed.(İã…¡úÿÿÿÿ8ÊùÙİÄ1
+P
+java:S1135«"2Complete the task associated to this TODO comment.(—ûŒ8ÚùÙİÄ1
+D	java:S131€""Add a default case to this switch.(ù‚Óøÿÿÿÿ8éùÙİÄ1
+D	java:S131š""Add a default case to this switch.(ù‚Óøÿÿÿÿ8ùùÙİÄ1
+F
+java:S1172Ñ"(Remove this unused method parameter "b".(“¦üÒ8ıùÙİÄ1
+M
+java:S1656Ò"/Remove or correct this useless self-assignment.(¹Àù8ıùÙİÄ1

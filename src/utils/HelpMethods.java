@@ -9,6 +9,7 @@ import java.awt.*;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.util.Random;
 
 import static utils.Constants.EnemyConstants.CRABBY;
 import static utils.Constants.EnemyConstants.SHARK;
@@ -263,6 +264,10 @@ public class HelpMethods {
             }
         return list;
     }
+
+
+
+
 
 
 

@@ -1,0 +1,17 @@
+
+M
+java:S1659"+Declare "containerImgs" on a separate line.(”®„¢ıÿÿÿÿ8–ı³­Ä1
+H
+java:S1659"+Declare "cannonBallImg" on a separate line.(œÀ¥8–ı³­Ä1
+8
+java:S3626h"Remove this redundant jump.(ûÁİ…8£ïó°Å1
+X	java:S125L"<This block of commented-out lines of code should be removed.(Ö«ÙÛ8¬¸õ°Å1
+O
+java:S1135S"2Complete the task associated to this TODO comment.(§Ğ®‚8ı³­Ä1
+L	java:S106e"+Replace this use of System.out by a logger.(ŒÎ¬Àÿÿÿÿÿ8¥ïó°Å1
+O
+java:S1135f"2Complete the task associated to this TODO comment.(Ó¸ªš8¥ïó°Å1
+N
+java:S1135|"2Complete the task associated to this TODO comment.(½Â,8ı³­Ä1
+p
+java:S3776È"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(Ì»ü8£ı³­Ä1

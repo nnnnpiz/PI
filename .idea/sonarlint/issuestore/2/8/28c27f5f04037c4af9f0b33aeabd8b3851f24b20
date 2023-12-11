@@ -21,8 +21,12 @@ b
 java:S1124!"EReorder the modifiers to comply with the Java Language Specification.(Úäóµ8×âªÑÄ1
 b
 java:S1124""EReorder the modifiers to comply with the Java Language Specification.(²åå8×âªÑÄ1
+H
+java:S1481o"+Remove this unused "frames" local variable.(ˆ¥¨è8³òù°Å1
+I
+java:S1481p",Remove this unused "updates" local variable.(úŠ›8³òù°Å1
 Y	java:S125‰"<This block of commented-out lines of code should be removed.(ù¹•ê8àâªÑÄ1
-M	java:S106“"+Replace this use of System.out by a logger.(Æ——ùúÿÿÿÿ8àâªÑÄ1
+^	java:S125“"<This block of commented-out lines of code should be removed.(İ”»ãùÿÿÿÿ8´òù°Å1
 H
 java:S1128	"+Remove this unused import 'utils.LoadSave'.(†‚ñø8ı¥ÙÕÄ1
 K
