@@ -1,19 +1,20 @@
 
 ’
-java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(§§ñÎûÿÿÿÿ8ŠÂ²Å1
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(§§ñÎûÿÿÿÿ8çÀéöÅ1
 
-java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ë´Ó¥8ŠÂ²Å1
-m	java:S117~"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ïúï8ŠÂ²Å1
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ë´Ó¥8çÀéöÅ1
+m	java:S117~"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ïúï8çÀéöÅ1
 O
-java:S1135="2Complete the task associated to this TODO comment.(ó½Â 8Š‹Â²Å1
-X	java:S125?"<This block of commented-out lines of code should be removed.(é´ÿä8Š‹Â²Å1
-]	java:S125R"<This block of commented-out lines of code should be removed.(ïıœ’øÿÿÿÿ8‹‹Â²Å1
-]	java:S125^"<This block of commented-out lines of code should be removed.(ïıœ’øÿÿÿÿ8Œ‹Â²Å1
+java:S11350"2Complete the task associated to this TODO comment.(·†í¯8ÂéöÅ1
+O
+java:S1135="2Complete the task associated to this TODO comment.(ó½Â 8ÂéöÅ1
+X	java:S125?"<This block of commented-out lines of code should be removed.(é´ÿä8ÂéöÅ1
+O
+java:S1135@"2Complete the task associated to this TODO comment.(‘ÖĞŠ8ÂéöÅ1
+]	java:S125^"<This block of commented-out lines of code should be removed.(ïıœ’øÿÿÿÿ8àç‡÷Å1
 t
-java:S3776b"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(¾š«Şøÿÿÿÿ8Œ‹Â²Å1
+java:S3776b"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(¾š«Şøÿÿÿÿ8 ÂéöÅ1
 T
-java:S1135g"2Complete the task associated to this TODO comment.(¥¶åùÿÿÿÿ8‹Â²Å1
+java:S1135g"2Complete the task associated to this TODO comment.(¥¶åùÿÿÿÿ8¡ÂéöÅ1
 T
-java:S1135o"2Complete the task associated to this TODO comment.(æŞ«üøÿÿÿÿ8‹Â²Å1
-G
-java:S1068"+Remove this unused "playing" private field.(ö¿ş98‹Â²Å1
+java:S1135o"2Complete the task associated to this TODO comment.(æŞ«üøÿÿÿÿ8¡ÂéöÅ1

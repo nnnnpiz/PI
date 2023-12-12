@@ -8,6 +8,8 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
+import static Probabilities.Probability.GenerateLvlDifficulty;
+import static levels.Level.lvlDifficulty;
 import static main.Game.TILES_SIZE;
 
 public class LevelManager {
@@ -26,19 +28,37 @@ public class LevelManager {
     }
 
     public void loadNextLevel(){
-        lvlIndex++;
+       // lvlIndex++;
+
+        // TODO COMENTANDO ESTA LINHA DEIXAMOS DE PASSAR DE MUDAR O MAPA. CONTINUA SMP NO MM NIVEL PARA SIMULAR RONDAS
+        //lvlDifficulty = GenerateLvlDifficulty();
+        //System.out.println(lvlDifficulty+ " nivel de dificuldade!");
         if(lvlIndex >= levels.size()){
             lvlIndex=0;
             System.out.println("No more levels! Gamme completed!");
-            Gamestate.state = Gamestate.MENU;
+           //Gamestate.state = Gamestate.MENU;
         }
 
         Level newLevel = levels.get(lvlIndex);
+        newLevel.resetAux();
+        //Level newLevel = levels.get(lvlIndex);
         game.getPlaying().getEnemyManager().loadEnemies(newLevel);
         game.getPlaying().getPlayer().loadLvlData(newLevel.getLvlData());
         game.getPlaying().setMaxLvlOffset(newLevel.getLvlOffset());
         game.getPlaying().getObjectManager().loadObjects(newLevel);
+
+
+
+        //levels.get(0).resetAux();
+        // adicionar agr as 4 linhas seguintes
+        /*
+        game.getPlaying().getEnemyManager().loadEnemies(levels.get(0));
+        game.getPlaying().getPlayer().loadLvlData(levels.get(0).getLvlData());
+        game.getPlaying().setMaxLvlOffset(levels.get(0).getLvlOffset());
+        game.getPlaying().getObjectManager().loadObjects(levels.get(0));
+     */
     }
+
 
     //inicializar todos os niveisd na arraylist
     private void buildAllLevels() {

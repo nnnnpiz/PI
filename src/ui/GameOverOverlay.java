@@ -92,7 +92,8 @@ public class GameOverOverlay {
         }
         else if(isIn(play,e)) {
             if (play.isMousePressed()){
-                playing.resetAll(); // qd tocamos no playAgain quueremos dar resetAll
+                //playing.resetAll(); // qd tocamos no playAgain quueremos dar resetAll
+                playing.loadNextLevelV2();
                 playing.getGame().getAudioPlayer().setLevelSong(playing.getLevelManager().getLvlIndex());
             }
         }

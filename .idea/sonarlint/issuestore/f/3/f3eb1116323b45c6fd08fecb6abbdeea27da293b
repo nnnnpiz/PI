@@ -15,14 +15,14 @@ java:S3776—"RRefactor this method to reduce its Cognitive Complexity from 37 t
 Y	java:S125ž"<This block of commented-out lines of code should be removed.(ö¼³ô8šÂäÞÄ1
 Y	java:S125ú"<This block of commented-out lines of code should be removed.(Àü˜Ô8žÂäÞÄ1
 U
-java:S1135ß"2Complete the task associated to this TODO comment.(¯ûúòúÿÿÿÿ8 ÂäÞÄ1
+java:S1135ñ"2Complete the task associated to this TODO comment.(¯ûúòúÿÿÿÿ8 ÂäÞÄ1
 O
-java:S1128"2Remove this unused import 'javax.imageio.ImageIO'.(‘çÔû8õÚøÞÄ1
+java:S1128"2Remove this unused import 'javax.imageio.ImageIO'.(‘çÔû8Ýœ¹öÅ1
 R
-java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úýÿÿÿÿ8õÚøÞÄ1
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úýÿÿÿÿ8Ýœ¹öÅ1
 M
-java:S1128"0Remove this unused import 'java.io.InputStream'.(¹»º8õÚøÞÄ1
+java:S1128"0Remove this unused import 'java.io.InputStream'.(¹»º8Þœ¹öÅ1
 X
-java:S1128"6Remove this unused import 'utils.Constants.Direction'.(à¼½ñüÿÿÿÿ8õÚøÞÄ1
+java:S1128"6Remove this unused import 'utils.Constants.Direction'.(à¼½ñüÿÿÿÿ8Þœ¹öÅ1
 ]
-java:S1128";Remove this unused import 'utils.Constants.Direction.DOWN'.(÷§œêÿÿÿÿÿ8õÚøÞÄ1
+java:S1128";Remove this unused import 'utils.Constants.Direction.DOWN'.(÷§œêÿÿÿÿÿ8Þœ¹öÅ1

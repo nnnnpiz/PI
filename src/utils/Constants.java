@@ -129,7 +129,6 @@ public class Constants {
 
         public static int GetMaxHealth(int enemy_type){//TODO MUDAR ISTO MAYBE PARA USAR O GENERATERNDDISCRETE2
 
-
             switch (enemy_type) {
                 case CRABBY:
                     return 50;

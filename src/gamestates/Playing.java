@@ -62,14 +62,23 @@ public class Playing extends State implements Statemethods{
     }
 
     public void loadNextLevel(){
+        resetAllLvlCompleted();
         levelManager.loadNextLevel();
         player.setSpawn(levelManager.getCurrentLevel().getPlayerSpawn()); //new spawn position p novo level!
+
+    }
+
+    public void loadNextLevelV2(){
         resetAll();
+        levelManager.loadNextLevel();
+        player.setSpawn(levelManager.getCurrentLevel().getPlayerSpawn()); //new spawn position p novo level!
     }
 
     private void loadStartLevel() {
+
         enemyManager.loadEnemies(levelManager.getCurrentLevel());
         objectManager.loadObjects(levelManager.getCurrentLevel());
+        resetAll();
     }
 
     //calc para o start level
@@ -97,15 +106,21 @@ public class Playing extends State implements Statemethods{
     public void update() {
         //enquanto esta PAUSED = TRUE o jogo nao da mais update. (para o jogo)
         if(paused){
+            //System.out.println("paused");
             pauseOverlay.update();
         } else if(lvlCompleted){
+            //System.out.println("lvl completed");
             levelCompletedOverlay.update();
         } else if(gameOver){
+           // System.out.println("gameover");
             gameOverOverlay.update();
+
         } else if(playerDying){ //check se o jogador esta a morrer
+            //System.out.println("dying");
             player.update();
         }//OU ESTA GAMEOVER OU O PLAYERDYING!
         else {
+            //System.out.println("here");
             levelManager.update();
             objectManager.update(levelManager.getCurrentLevel().getLvlData(), player);
             player.update();
@@ -174,6 +189,17 @@ public class Playing extends State implements Statemethods{
         lvlCompleted=false;
         playerDying=false;
         player.resetAll();
+        enemyManager.resetAllEnemies();
+        objectManager.resetAllObjects();
+    }
+
+    public void resetAllLvlCompleted(){
+        //TODO: reset playing, enemy, lvl, etc.
+        gameOver=false;
+        paused=false;
+        lvlCompleted=false;
+        playerDying=false;
+        player.resetAllLvlCompletedNoResetHealth();
         enemyManager.resetAllEnemies();
         objectManager.resetAllObjects();
     }

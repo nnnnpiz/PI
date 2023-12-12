@@ -1,3 +1,8 @@
 
 n
-java:S3776)"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(ùÛ›	8ÊÓõúÄ1
+java:S37763"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(ùÛ›	8ÊÓõúÄ1
+>	java:S131:""Add a default case to this switch.(ş™ÅŞ8é¶÷Å1
+K
+java:S1172U".Remove this unused method parameter "playing".(¦”Ø¯8ê¶÷Å1
+Q
+java:S1144#"4Remove this unused private "updateAttackBox" method.(·¤›«8˜áƒ÷Å1

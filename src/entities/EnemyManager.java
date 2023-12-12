@@ -45,7 +45,7 @@ public class EnemyManager {
     }
 
     public void update(int[][] lvlData, Player player){
-        boolean isAnyActive = false;
+        boolean isAnyActive = false; //TODO deixar a false!
         for(Crabby c : crabbies)
             if(c.isActive()){
                 c.update(lvlData, player);
@@ -61,8 +61,8 @@ public class EnemyManager {
         //TODO DESCOMENTAR ISTO PARA TER SEGUIMENTO DE NIVEIS!1111111111111111111111111 MUDAR ISTO PARA TALVEZ DIFERENCIAR RONDAS
         if(!isAnyActive) {
             //playing.setLevelCompleted(true);
-
-
+            //TODO mudar de nivel mas para o mesmo para dar um efeito de rondas !
+            playing.setLevelCompleted(true);
         }
     }
 
@@ -78,8 +78,8 @@ public class EnemyManager {
                         (int) (s.getHitbox().x - SHARK_DRAWOFFSET_X) - xLevelOffset + s.flipX(),
                         (int) (s.getHitbox().y - SHARK_DRAWOFFSET_Y),
                         SHARK_WIDTH * s.flipW(), SHARK_HEIGHT, null);
-                //c.drawHitbox(g, xLvlOffset); for debugging hitbox
-                //c.drawAttackBox(g, xLevelOffset);
+                //s.drawHitbox(g, xLevelOffset);// for debugging hitbox
+                //s.drawAttackBox(g, xLevelOffset); //for debugging attackbox
             }
     }
 

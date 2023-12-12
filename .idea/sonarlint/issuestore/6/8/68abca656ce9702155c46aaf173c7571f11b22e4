@@ -1,14 +1,21 @@
 
 ‡
-java:S4165Ò"iRemove this useless assignment; "playerDying" already holds the assigned value along all execution paths.(¹Àù8·ùÙİÄ1
+java:S4165ì"iRemove this useless assignment; "playerDying" already holds the assigned value along all execution paths.(¹Àù8·ùÙİÄ1
 b
 java:S1659)"EDeclare "bigCloud" and all following declarations on a separate line.(ö»’8¹ùÙİÄ1
-]	java:S125}"<This block of commented-out lines of code should be removed.(İã…¡úÿÿÿÿ8ÊùÙİÄ1
+]	java:S125m"<This block of commented-out lines of code should be removed.(ËÎèııÿÿÿÿ8šØ¼¶Å1
+]	java:S125p"<This block of commented-out lines of code should be removed.(ëÕ–Ëÿÿÿÿÿ8›Ø¼¶Å1
+X	java:S125s"<This block of commented-out lines of code should be removed.(•´™8›Ø¼¶Å1
+]	java:S125w"<This block of commented-out lines of code should be removed.(Ñõÿÿÿÿÿ8›Ø¼¶Å1
+X	java:S125{"<This block of commented-out lines of code should be removed.(Úê†÷8œØ¼¶Å1
+^	java:S125Œ"<This block of commented-out lines of code should be removed.(İã…¡úÿÿÿÿ8ù†€¶Å1
 P
-java:S1135«"2Complete the task associated to this TODO comment.(—ûŒ8ÚùÙİÄ1
-D	java:S131€""Add a default case to this switch.(ù‚Óøÿÿÿÿ8éùÙİÄ1
-D	java:S131š""Add a default case to this switch.(ù‚Óøÿÿÿÿ8ùùÙİÄ1
+java:S1135º"2Complete the task associated to this TODO comment.(—ûŒ8ü†€¶Å1
+P
+java:S1135Å"2Complete the task associated to this TODO comment.(—ûŒ8ÁŒ½öÅ1
+D	java:S131š""Add a default case to this switch.(ù‚Óøÿÿÿÿ8€‡€¶Å1
+D	java:S131´""Add a default case to this switch.(ù‚Óøÿÿÿÿ8€‡€¶Å1
 F
-java:S1172Ñ"(Remove this unused method parameter "b".(“¦üÒ8ıùÙİÄ1
+java:S1172ë"(Remove this unused method parameter "b".(“¦üÒ8‚‡€¶Å1
 M
-java:S1656Ò"/Remove or correct this useless self-assignment.(¹Àù8ıùÙİÄ1
+java:S1656ì"/Remove or correct this useless self-assignment.(¹Àù8‚‡€¶Å1

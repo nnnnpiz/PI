@@ -29,7 +29,7 @@ public abstract class Enemy extends  Entity{
     public Enemy(float x, float y, int width, int height, int enemyType) {
         super(x, y, width, height);
         this.enemyType=enemyType;
-        maxHealth = GetMaxHealthV2(enemyType); //vida dod crab
+        maxHealth = GetMaxHealthV2(enemyType); //vida do crab
         currentHealth = maxHealth;
         walkSpeed = Game.SCALE * 0.35f; //TODO MUDAR ISTO PARA VA, speed do inimigo
     }
@@ -53,7 +53,7 @@ public abstract class Enemy extends  Entity{
         if(enemy_type == SHARK && Level.lvlDifficulty == LVL_DIFFICUlTY_0)
             return 10;
         else
-            return 0;
+            return 10000000;
     }
 
     protected int GetEnemyDmgV2(int enemyType){
@@ -75,9 +75,11 @@ public abstract class Enemy extends  Entity{
         if(enemyType ==SHARK && Level.lvlDifficulty == LVL_DIFFICUlTY_0)
             return 10;
         else
-            return 0;
+            return 1000000;
 
     }
+
+
 
     protected void inAirChecks(int[][] lvlData, Playing playing) {
         if (state != HIT && state != DEAD) {

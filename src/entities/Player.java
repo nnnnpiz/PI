@@ -459,6 +459,24 @@ public class Player extends Entity{
 
     }
 
+    public void resetAllLvlCompletedNoResetHealth(){
+        resetDirBooleans();
+        inAir=false;
+        attacking=false;
+        moving=false;
+        airSpeed=0f;
+        state=IDLE;
+
+
+        hitbox.x=x;
+        hitbox.y=y;
+        resetAttackBox();
+
+        if(!IsEntityOnFloor(hitbox,lvlData))
+            inAir=true;
+
+    }
+
     private void resetAttackBox(){
         if(flipW == 1 ){
             attackBox.x = hitbox.x + hitbox.width+ (int)(Game.SCALE*10); //attack box follows a hitbox do player + um offset

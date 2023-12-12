@@ -29,11 +29,21 @@ public class Shark extends Enemy {
     public void update(int[][] lvlData, Player player) {
         updateBehavior(lvlData, player);
         updateAnimationTick();
-        updateAttackBox();
+        updateAttackBoxFlip();
     }
 
     private void updateAttackBox() {
         attackBox.x = hitbox.x - attackBoxOffsetX;
+        attackBox.y = hitbox.y;
+    }
+
+    //p shark mudar a attack box consoante a direçao q esta virado
+    protected void updateAttackBoxFlip() {
+        if (walkDir == RIGHT)
+            attackBox.x = hitbox.x + hitbox.width;
+        else
+            attackBox.x = hitbox.x - attackBoxOffsetX;
+
         attackBox.y = hitbox.y;
     }
 

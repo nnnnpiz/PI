@@ -7,6 +7,7 @@ import objects.Cannon;
 import objects.GameContainer;
 import objects.Potion;
 import objects.Spike;
+import utils.HelpMethods;
 import utils.LoadSave;
 
 import java.awt.*;
@@ -33,7 +34,7 @@ public class Level {
     private int maxLvlOffsetX;
     private Point playerSpawn;
 
-    public static int lvlDifficulty;
+    public static int lvlDifficulty=-1;
 
     //dificuldade atual da ronda:
     public int getLvlDifficulty() {
@@ -46,15 +47,25 @@ public class Level {
 
     public Level(BufferedImage img){
         this.img = img;
-        lvlDifficulty = GenerateLvlDifficulty();
+        resetAux();
+    }
+
+    public void resetAux(){
+
+        generateLvlDiff(); //todo NB
+        createEnemiesVA();
         createLevelData();
-        createEnemies();
         createPotions();
         createContainers();
         createSpikes();
-        createCannons();
+        //createCannons(); todo nb
         calcLvlOffsets();
         calcPlayerSpawn();
+    }
+
+    private void generateLvlDiff(){
+        lvlDifficulty = GenerateLvlDifficulty();
+        System.out.println(lvlDifficulty+ "- nivel de dificuldade!");
     }
 
     private void createCannons() {
@@ -81,6 +92,16 @@ public class Level {
         lvlTilesWide = img.getWidth();
         maxTilesOffset = lvlTilesWide - Game.TILES_IN_WIDTH;
         maxLvlOffsetX = Game.TILES_SIZE * maxTilesOffset;
+    }
+
+    private void createEnemiesVA(){
+        crabs = new ArrayList<>();
+        sharks = new ArrayList<>();
+        cannons = new ArrayList<>();
+        GetEnemiesVA(img, Level.lvlDifficulty, crabs, sharks, cannons);
+        System.out.println(crabs.size() +" crabs size");
+        System.out.println(sharks.size() +" sharks size");
+        System.out.println(cannons.size() +" cannons size");
     }
 
     private void createEnemies() {

@@ -1,5 +1,6 @@
 package utils;
 
+import Probabilities.Probability;
 import entities.Crabby;
 import entities.Shark;
 import main.Game;
@@ -180,7 +181,7 @@ public class HelpMethods {
 
     public static ArrayList<Shark> GetSharks(BufferedImage img){
         ArrayList<Shark> list = new ArrayList<>();
-        list.add(new Shark(250, 200));
+        list.add(new Shark(3000, 300));
 
         for(int j =0; j<img.getHeight();j++)
             for(int i =0; i<img.getWidth(); i++){
@@ -263,6 +264,64 @@ public class HelpMethods {
 
             }
         return list;
+    }
+
+
+
+    public static void GetEnemiesVA(BufferedImage img,int diff,ArrayList<Crabby> c,ArrayList<Shark> s,ArrayList<Cannon> canhão){
+        c.clear();
+        s.clear();
+        canhão.clear();
+        if (diff == 0){
+            for(int i = 1500;i < 2000;i=i+300){
+                int enemy = Probability.whatEnemie();
+                if(enemy == 1)
+                    c.add(new Crabby(i, 300));
+                if(enemy == 2)
+                    s.add(new Shark(i, 300));
+                if(enemy == 3)
+                    canhão.add(new Cannon(i,580, 5));
+            }
+        }
+
+        if (diff == 1){
+            for(int i = 1500;i < 2200;i=i+300){
+                int enemy = Probability.whatEnemie();
+                if(enemy == 1)
+                    c.add(new Crabby(i, 300));
+                if(enemy == 2)
+                    s.add(new Shark(i, 300));
+                if(enemy == 3)
+                    canhão.add(new Cannon(i,580, 5));
+            }
+        }
+
+        if (diff == 2){
+            for(int i = 1500;i < 2500;i=i+300){
+                int enemy = Probability.whatEnemie();
+                if(enemy == 1)
+                    c.add(new Crabby(i, 300));
+                if(enemy == 2)
+                    s.add(new Shark(i, 300));
+                if(enemy == 3)
+                    canhão.add(new Cannon(i,580, 5));
+            }
+        }
+
+        if (diff == 3){
+            for(int i = 1500;i < 3000;i=i+300){
+                int enemy = Probability.whatEnemie();
+                if(enemy == 1)
+                    c.add(new Crabby(i, 300));
+                if(enemy == 2)
+                    s.add(new Shark(i, 300));
+                if(enemy == 3)
+                    canhão.add(new Cannon(i,580, 5));
+            }
+        }
+
+        c.add(new Crabby(2900, 300));
+
     }
 
 
