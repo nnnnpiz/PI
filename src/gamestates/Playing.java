@@ -17,6 +17,7 @@ import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
+import static Probabilities.Probability.generateRandomNormalV2;
 import static utils.Constants.Environment.*;
 
 import static main.Game.SCALE;
@@ -46,8 +47,10 @@ public class Playing extends State implements Statemethods{
     private boolean lvlCompleted=false;
     private boolean playerDying;
 
+
     public Playing(Game game){
         super(game);
+        new gamestates.State(game).start(); //TODO maybe change
         initClasses();
 
         backgroundImg = LoadSave.GetSpriteAtlas(LoadSave.PLAYING_BG_IMG);
@@ -160,6 +163,7 @@ public class Playing extends State implements Statemethods{
         player.render(g, xLvlOffset);
         enemyManager.draw(g, xLvlOffset);
         objectManager.draw(g, xLvlOffset);
+
 
         //so quero dar draw no pause overlay se PAUSED= TRUE
         if(paused) {

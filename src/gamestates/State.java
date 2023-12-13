@@ -6,7 +6,9 @@ import ui.MenuButton;
 
 import java.awt.event.MouseEvent;
 
-public class State {
+import static Probabilities.Probability.generateRandomNormalV2;
+
+public class State extends Thread {
 
     protected Game game;
 
@@ -31,5 +33,29 @@ public class State {
         }
 
         Gamestate.state = state;
+    }
+
+    private int i=0;
+    @Override
+    public void run(){
+
+        while(true) {
+            int cloudEvent = (int) generateRandomNormalV2(100, 35);
+            i++;
+            if (cloudEvent == 0) {
+
+                //g.drawImage(tiago!)
+                System.out.println("EVENTO ESPECIAL AGORA!!!!!!!!!!!!!" + " " + i + "vezes");
+                i = 0;
+
+                try {
+                    Thread.sleep(90000);
+                } catch (InterruptedException e) {
+                    System.out.println("erro no sleep da thread do evento especial");
+                }
+
+            }
+        }
+
     }
 }

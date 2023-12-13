@@ -12,6 +12,7 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
 
+import static Probabilities.Probability.generateRandomNormalV2;
 import static utils.Constants.ANI_SPEED;
 import static utils.Constants.Direction.*;
 import static utils.Constants.Direction.DOWN;
@@ -70,7 +71,7 @@ public class Player extends Entity{
 
     private boolean powerAttackActive; //check se estamos "durante" um ataque ou nao
     private int powerAttackTick; //da increase uma vez por "update" se o powerAttack tiver active. qd o Tick chegar a um limite deixamos d fazer o powerAttack
-    private int powerGrowSpeed = 15; //para dar increase no power do player ao longo do tempo (tmb podemos aumentar a barra do power com poçoes azuis)
+    private int powerGrowSpeed = 30; //para dar increase no power do player ao longo do tempo (tmb podemos aumentar a barra do power com poçoes azuis)
     private int powerGrowTick;
 
 
@@ -499,4 +500,6 @@ public class Player extends Entity{
             changePower(-60);
         }
     }
+
+
 }

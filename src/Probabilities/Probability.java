@@ -7,28 +7,45 @@ public class Probability {
 
         private static Random random = new Random();
 
-        /* ? //TODO prob de evento especial da nuvem??
+        /* ? //TODO prob de evento especial da nuvem => ISTO ESTA FEITO NUMA THREAD QUE MONITORIZA O ESTADO DO JOGO
+        // ESSA THREAD DA SLEEP TALVEZ MUDAR O MS DO SLEEP... //TODO evento special a dar +1000 d score tipo assim
         mean = 100
         std_dev = 35
-        OU
+        Na generateRandomNormalV2
 
-        TODO probabilidade de uma caixa que tem ITEMS dar spawn
-        mean = 50
-        std_dev = 20
+
+
+        //////////////////////////////////////////////////////////////////////////////////////////////
+        TODO probabilidade de uma caixa que tem ITEMS dar spawn numa dada localizaçao.
+          Esta prob. abaixo usando a funçao da Normal do java não estava a gerar os valores corretos
+          portanto decidimos partir com outra abordagem (a funçao generateRandomNormalV2)
+
          */
         public static double generateRndNormal(double media, double desvio){
             double var = 0;
             var = media * desvio * random.nextGaussian();
-
-          //  if(var > 100) TOOD FALAR COM ANTONIO PQ ISSO DA SMP OU 0 ou 100!
-            //    return 100;
-           // else if (var <0)
-           //     return 0;
-           // else
-                return var;
+            return var;
         }
 
+        //mean = 50
+        //std_dev = 20:
+    //TODO DONE ////////////////////////////////////////////////////////////////////////////////////
+    //TODO probabilidade de uma caixa que tem ITEMS dar spawn [FIXED]: a que usamos é esta
+        public static double generateRandomNormalV2(double mean, double stdDev) {
+            // Using the Box-Muller transform to generate random numbers from a normal distribution
+            double u1 = random.nextDouble();
+            double u2 = random.nextDouble();
 
+            double z0 = Math.sqrt(-2.0 * Math.log(u1)) * Math.cos(2.0 * Math.PI * u2);
+
+            if(mean + z0 * stdDev > 100)
+                return 100;
+            else if(mean + z0 * stdDev < 0)
+                return 0;
+            else
+                return mean + z0 * stdDev; // Apply mean and standard deviation
+
+        }
 
         /*
         TODO Probabilidade de geração de cada tipo de aversário: 1 => crabby, 2 => shark , 3 => Cannon
@@ -89,10 +106,25 @@ public class Probability {
 
 
 
+
+
+
+
+
         //TODO:
-        /*FALTA A DE Distrib POISSON:
+        /*Distrib POISSON:
         % do nivel de dano do player... (ataques que dao CRITIC - uma % extra do dano base que o jogador pode infligir)
          */
+
+    //TODO fzr...
+
+
+
+
+
+        //TODO READ ME, tivemos dificuldades a tentar implementar a Distrib de POISSON (funçoes abaixo) usando o material de apoio
+        // "Computer Generation of Statistical Distributions by Richard Saucier" por isso seguimos outra abordagem para essa funçao.
+        // feita no metodo acima.
 
         static long Q_ = 30845; // 30845
         static  long A_ = 69621; // 69621

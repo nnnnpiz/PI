@@ -12,6 +12,7 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.Random;
 
+import static Probabilities.Probability.generateRandomNormalV2;
 import static utils.Constants.EnemyConstants.CRABBY;
 import static utils.Constants.EnemyConstants.SHARK;
 import static utils.Constants.ObjectConstants.*;
@@ -234,6 +235,43 @@ public class HelpMethods {
 
             }
         return list;
+    }
+
+    //TODO p probabilty; int = 2 => barrel. int =3 => Box.
+    public static ArrayList<GameContainer> GetContainersVA(BufferedImage img){
+        ArrayList<GameContainer> list = new ArrayList<>();
+
+        while(true) {
+            int containerX = (int) generateRandomNormalV2(50, 20);
+            int containerX2 = (int) generateRandomNormalV2(50, 20);
+            System.out.println("containerX p BARREL: " + containerX);
+            System.out.println("/ containerX2 p BOX " + containerX2);
+            // MAX = 3100, MIN 60!
+            if (containerX * Game.TILES_SIZE > 3100 || containerX2*Game.TILES_SIZE > 3100)
+               continue;
+            else if (containerX * Game.TILES_SIZE == 0 || containerX2*Game.TILES_SIZE == 0){
+                containerX=1;
+                containerX2=2;
+            }
+
+            if(IsGcVAInBounds(containerX) && IsGcVAInBounds(containerX2)){
+                list.add(new GameContainer(containerX * Game.TILES_SIZE, 580, 2));
+                list.add(new GameContainer(containerX2 * Game.TILES_SIZE, 580, 3));
+                return list;
+            } //se for false volta a iterar pelo while e recalcula pos ate ter uma valida
+        }
+
+    }
+
+    //Colina: Min=380 , Max=760 //Trap: Min=970, Max=1220, entre os dois valores n pode spawnar
+    public static boolean IsGcVAInBounds(int x){
+        int aux= x*Game.TILES_SIZE;
+        if(aux >380 && aux<760)
+            return false;
+        else if(aux > 970 && aux <1220)
+            return false;
+        else
+            return true;
     }
 
     public static ArrayList<Spike> GetSpikes(BufferedImage img){

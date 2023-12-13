@@ -77,7 +77,8 @@ public class Level {
     }
 
     private void createContainers() {
-        containers = GetContainers(img);
+        //containers = GetContainers(img);
+        containers = GetContainersVA(img);
     }
 
     private void createPotions() {

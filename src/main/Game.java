@@ -10,6 +10,8 @@ import utils.LoadSave;
 
 import java.awt.*;
 
+import static Probabilities.Probability.generateRandomNormalV2;
+
 
 public class Game implements Runnable{
 
@@ -102,6 +104,7 @@ public class Game implements Runnable{
     //Game Thread vai correr aqui
     @Override
     public void run() {
+
         //qt tempo cada frame dura em nanoSec p ser mais accurate possivel
         double timePerFrame = 1000000000.0/FPS_SET;
         double timePerUpdate = 1000000000.0/UPS_SET; //nao é o tempo q um frame demora a atualizar mas sim o tempo entre os dois... o tempo da frequencia entre os dois
@@ -116,6 +119,7 @@ public class Game implements Runnable{
         double deltaF = 0;
 
         while(true){
+
             long currentTime = System.nanoTime();
 
             deltaU += (currentTime-previousTime) / timePerUpdate; //chega a 1 ou mais qd a duraçao desde o ultimo update for = ou > q o timePerUpdate

@@ -32,8 +32,8 @@ public class Constants {
         public static final int CANNON_LEFT =5; //pq queremos q o cannon aponte p diireita ou esq p dps vermos se ele consegue ver o player ou n
         public static final int CANNON_RIGHT =6;
 
-        public static final int RED_POTION_VALUE =15; //HEALTH
-        public static final int BLUE_POTION_VALUE =10; //POWER BAR
+        public static final int RED_POTION_VALUE =20; //HEALTH
+        public static final int BLUE_POTION_VALUE =20; //POWER BAR
 
         public static final int CONTAINER_WIDTH_DEFAULT =40;
         public static final int CONTAINER_HEIGHT_DEFAULT =30;
