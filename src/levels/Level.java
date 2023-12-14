@@ -52,13 +52,13 @@ public class Level {
 
     public void resetAux(){
 
-        generateLvlDiff(); //todo NB
+        generateLvlDiff(); //NB
         createEnemiesVA();
         createLevelData();
         createPotions();
         createContainers();
         createSpikes();
-        //createCannons(); todo nb
+        //createCannons(); nb
         calcLvlOffsets();
         calcPlayerSpawn();
     }

@@ -4,34 +4,39 @@ import java.util.Random;
 import static java.lang.Math.exp;
 
 public class Probability {
-
         private static Random random = new Random();
 
-        /* ? //TODO prob de evento especial da nuvem => ISTO ESTA FEITO NUMA THREAD QUE MONITORIZA O ESTADO DO JOGO
-        // ESSA THREAD DA SLEEP TALVEZ MUDAR O MS DO SLEEP... //TODO evento special a dar +1000 d score tipo assim
+        /* Evento especial a dar +1000000 de score. Esta VA utiliza a funçao GenerateRandomNormalV2 e tem a utilidade de
+        gerar um valor X que representa a marca (em rondas) em que vai ocorrer esse evento especial caracterizado
+        no jogador receber +1M de score. Apos ser gerado X, esse evento só vai ocorrer apos essas X rondas, tendo o
+        jogador que se manter vivo.
+
+        Valores a utilizar na generateRandomNormalV2:
         mean = 100
         std_dev = 35
-        Na generateRandomNormalV2
+        */
 
+        /* NOTA:
+          Esta função a baixo, usando o metodo da Normal do java, não estava a gerar os valores corretos
+          portanto decidimos partir com outra abordagem (a funçao generateRandomNormalV2), que simula o
+          comportamento descrito nos histogramas de forma mais precisa!
 
-
-        //////////////////////////////////////////////////////////////////////////////////////////////
-        TODO probabilidade de uma caixa que tem ITEMS dar spawn numa dada localizaçao.
-          Esta prob. abaixo usando a funçao da Normal do java não estava a gerar os valores corretos
-          portanto decidimos partir com outra abordagem (a funçao generateRandomNormalV2)
-
-         */
         public static double generateRndNormal(double media, double desvio){
             double var = 0;
             var = media * desvio * random.nextGaussian();
             return var;
         }
+        */
 
-        //mean = 50
-        //std_dev = 20:
-    //TODO DONE ////////////////////////////////////////////////////////////////////////////////////
-    //TODO probabilidade de uma caixa que tem ITEMS dar spawn [FIXED]: a que usamos é esta
-        public static double generateRandomNormalV2(double mean, double stdDev) {
+        /* VA que representa a prob de uma caixa que tem ITEMS dar spawn numa dada localizaçao, sendo o valor
+        gerado a localiçao do X onde ela vai aparecer no mapa!
+
+        Valores usados na generateRandomNormalV2:
+        mean = 50
+        std_dev = 20:
+        */
+
+        public static double generateRandomNormalV2(double mean, double stdDev) { //representa duas VAs consoante os valores dados como args.
             // Using the Box-Muller transform to generate random numbers from a normal distribution
             double u1 = random.nextDouble();
             double u2 = random.nextDouble();
@@ -47,12 +52,9 @@ public class Probability {
 
         }
 
-        /*
-        TODO Probabilidade de geração de cada tipo de aversário: 1 => crabby, 2 => shark , 3 => Cannon
 
-         TODO DONE  ////////////////////////////// //////////////////////////////
-         */
-        public static int whatEnemie() {
+        //Probabilidade de geração de cada tipo de adversário: 1 => crabby, 2 => shark , 3 => Cannon.
+        public static int whatEnemie() { //(uma VA)
             int[] vals = {1,2,3};
             double var = random.nextDouble();
             if ( var >= 0 && var <0.4)
@@ -63,15 +65,13 @@ public class Probability {
                 return vals[2];
         }
 
-    //TODO//////////////////////////// //////////////////////////////////////////////////////////// //////////////////////////////
 
         /*
-        TODO Probabilidade de uma ronda ter um nivel diferente de dificuldade:
-        TODO ha 4 niveis de dificuldade. => influencia vida e dano que os adversarios dao e a quantidade de adversarios
-         TODO DONE ////////////////////////////////////////////////////////////////////////////////////////////////////////
+        Probabilidade de uma ronda ter um nivel diferente de dificuldade:
+        ha 4 niveis de dificuldade. => cada um influencia a vida e dano que os adversarios teem/infligem, e tambem
+        a quantidade de adversarios que vao dar spawn na ronda. Esse nivel de dificuldade é gerado de ronda a ronda
          */
-        //Gera o nivel de dificuldade da ronda. Muda esse nivel de dif de ronda a ronda. smp q começa uma ronda nova damos setDifficulty desse novo nr gerado para a dificuldade
-        public static int GenerateLvlDifficulty(){
+        public static int GenerateLvlDifficulty(){ //uma VA.
             int[] vals = {0,1,2,3};
             double var = random.nextDouble();
             if ( var >= 0 && var <0.5)
@@ -84,13 +84,12 @@ public class Probability {
                 return vals[3];
         }
 
-        //TODO///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        /* GERAR items diferentes em caixas / barrels
-        /TODO DONE!////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        /* Prob. p GERAR items diferentes em cada caixa / barrel
         o vals[0] é uma opçao onde partimos o bau e nao sai nenhum item de preposito...
          */
-        public static int halfRandomPotion() {
+        public static int halfRandomPotion() { //uma VA.
             int[] vals = {2,0,1,-1};
             double var = random.nextDouble();
             if ( var >=0 && var <0.05)
@@ -102,23 +101,28 @@ public class Probability {
             else
                 return vals[3];
         }
-        //TODO ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
-
-
-
-
-
-        //TODO:
         /*Distrib POISSON:
         % do nivel de dano do player... (ataques que dao CRITIC - uma % extra do dano base que o jogador pode infligir)
+        consoante o que a distrib de Poisson gerar.
          */
+        public static int funPoissonSingle () { //Uma VA.
+            double exp_lambda = Math.exp (-5); //constant for terminating loop
+            double randUni; //uniform variable
+            double prodUni = 1; //product of uniform variables
+            int randPoisson= 1; //Poisson variable
 
-    //TODO fzr...
+            do {
+                //randUni = funUniformSingle (); //generate uniform variable
+                randUni = random.nextGaussian();
+                prodUni = prodUni * randUni; //update product
+                randPoisson++; // increase Poisson variable
 
+            } while (prodUni > exp_lambda);
 
+            return randPoisson;
+        }
 
 
 

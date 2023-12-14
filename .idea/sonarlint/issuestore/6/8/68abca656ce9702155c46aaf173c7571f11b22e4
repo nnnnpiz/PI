@@ -1,25 +1,27 @@
 
 ‡
-java:S4165ğ"iRemove this useless assignment; "playerDying" already holds the assigned value along all execution paths.(¹Àù8ÈÂÇ‰Æ1
+java:S4165ı"iRemove this useless assignment; "playerDying" already holds the assigned value along all execution paths.(¹Àù8ÈÂÇ‰Æ1
 b
-java:S1659*"EDeclare "bigCloud" and all following declarations on a separate line.(ö»’8ÈÂÇ‰Æ1
-T
-java:S11355"2Complete the task associated to this TODO comment.(ÖÂáİÿÿÿÿÿ8©Ğ­ŠÆ1
-]	java:S125p"<This block of commented-out lines of code should be removed.(ËÎèııÿÿÿÿ8ÒÂÇ‰Æ1
-]	java:S125s"<This block of commented-out lines of code should be removed.(ëÕ–Ëÿÿÿÿÿ8ÒÂÇ‰Æ1
-X	java:S125v"<This block of commented-out lines of code should be removed.(•´™8ÒÂÇ‰Æ1
-]	java:S125z"<This block of commented-out lines of code should be removed.(Ñõÿÿÿÿÿ8ÒÂÇ‰Æ1
-X	java:S125~"<This block of commented-out lines of code should be removed.(Úê†÷8ÒÂÇ‰Æ1
-^	java:S125"<This block of commented-out lines of code should be removed.(İã…¡úÿÿÿÿ8ÔÂÇ‰Æ1
+java:S1659*"EDeclare "bigCloud" and all following declarations on a separate line.(ó³£Œ8ÈÂÇ‰Æ1
+]	java:S1252"<This block of commented-out lines of code should be removed.(Ø±Øåøÿÿÿÿ8ª‚ö­Æ1
+O
+java:S11357"2Complete the task associated to this TODO comment.(Ç¼«¤8·´üªÆ1
+]	java:S125s"<This block of commented-out lines of code should be removed.(ËÎèııÿÿÿÿ8ÒÂÇ‰Æ1
+]	java:S125v"<This block of commented-out lines of code should be removed.(ëÕ–Ëÿÿÿÿÿ8ÒÂÇ‰Æ1
+X	java:S125y"<This block of commented-out lines of code should be removed.(•´™8ÒÂÇ‰Æ1
+]	java:S125}"<This block of commented-out lines of code should be removed.(Ñõÿÿÿÿÿ8ÒÂÇ‰Æ1
+Y	java:S125"<This block of commented-out lines of code should be removed.(Úê†÷8ÒÂÇ‰Æ1
+^	java:S125’"<This block of commented-out lines of code should be removed.(İã…¡úÿÿÿÿ8ÔÂÇ‰Æ1
+^	java:S125Â"<This block of commented-out lines of code should be removed.(› ºÌÿÿÿÿÿ8ÎëË­Æ1
 P
-java:S1135¾"2Complete the task associated to this TODO comment.(—ûŒ8ÔÂÇ‰Æ1
-P
-java:S1135É"2Complete the task associated to this TODO comment.(—ûŒ8ØÂÇ‰Æ1
-D	java:S131""Add a default case to this switch.(ù‚Óøÿÿÿÿ8ÜÂÇ‰Æ1
-D	java:S131¸""Add a default case to this switch.(ù‚Óøÿÿÿÿ8ÜÂÇ‰Æ1
+java:S1135Á"2Complete the task associated to this TODO comment.(™…Ç8¬Ù«Æ1
+D	java:S131«""Add a default case to this switch.(ù‚Óøÿÿÿÿ8ÜÂÇ‰Æ1
+D	java:S131Å""Add a default case to this switch.(ù‚Óøÿÿÿÿ8ÜÂÇ‰Æ1
 F
-java:S1172ï"(Remove this unused method parameter "b".(“¦üÒ8àÂÇ‰Æ1
+java:S1172ü"(Remove this unused method parameter "b".(“¦üÒ8àÂÇ‰Æ1
 M
-java:S1656ğ"/Remove or correct this useless self-assignment.(¹Àù8àÂÇ‰Æ1
+java:S1656ı"/Remove or correct this useless self-assignment.(¹Àù8àÂÇ‰Æ1
 o
-java:S1128"MRemove this unused import 'Probabilities.Probability.generateRandomNormalV2'.(Íğª¤şÿÿÿÿ8•Š¬ŠÆ1
+java:S1128"MRemove this unused import 'Probabilities.Probability.generateRandomNormalV2'.(Íğª¤şÿÿÿÿ8ñ«Æ1
+O
+java:S1068*"2Remove this unused "eventoEspecial" private field.(ó³£Œ8ÖëË­Æ1

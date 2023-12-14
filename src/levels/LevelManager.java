@@ -30,7 +30,7 @@ public class LevelManager {
     public void loadNextLevel(){
        // lvlIndex++;
 
-        // TODO COMENTANDO ESTA LINHA DEIXAMOS DE PASSAR DE MUDAR O MAPA. CONTINUA SMP NO MM NIVEL PARA SIMULAR RONDAS
+
         //lvlDifficulty = GenerateLvlDifficulty();
         //System.out.println(lvlDifficulty+ " nivel de dificuldade!");
         if(lvlIndex >= levels.size()){
@@ -83,7 +83,6 @@ public class LevelManager {
                 int index = levels.get(lvlIndex).getSpriteIndex(i,j);
                 g.drawImage(levelSprite[index], TILES_SIZE*i - lvlOffset, TILES_SIZE*j,TILES_SIZE,TILES_SIZE, null);
             }
-
 
     }
 

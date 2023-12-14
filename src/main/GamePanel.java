@@ -54,7 +54,7 @@ public class GamePanel extends JPanel {
     public void paintComponent(Graphics g){
         super.paintComponent(g);
         //subImg = img.getSubimage(1*64, 8*40, 64, 40); //vamos buscar outro sprite da matriz o (1,8)
-        //TODO ISTO PASSOU P CLASSE PLAYER p ficar em cada
+        //ISTO PASSOU P CLASSE PLAYER p ficar em cada
         //g.drawImage(animations[playerAction][aniIndex], (int)xDelta,(int)yDelta, 256, 160, null); //4º arg. ImageObserver usado p monitorizar o estado da imagem antes de ser FULLY drawn nao vai ser usado por questoes de simplicidade de codigo
         //nb q width x height faz de "factor" e multiplica o tamanho do sprite deste q seja o dobro p ficar prop.
 

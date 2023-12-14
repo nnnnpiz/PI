@@ -34,6 +34,6 @@ public class Potion extends GameObject{
 
     }
 
-    //TODO over effect na potion
+
 
 }

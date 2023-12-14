@@ -39,7 +39,7 @@ public class Playing extends State implements Statemethods{
     private int rightBorder = (int) (0.8*Game.GAME_WIDTH); //80%
     private int maxLvlOffsetX;
 
-    private BufferedImage backgroundImg, bigCloud, smallCloud; //playing background img, bigcloud, smallcloud
+    private BufferedImage backgroundImg, bigCloud, smallCloud, eventoEspecial; //playing background img, bigcloud, smallcloud
     private int[] smallCloudsPos; //p randomizar as small clouds c differtn y values
     private Random rnd = new Random(); //talvez mudar isto para ser uma distribuiçao?
 
@@ -47,10 +47,13 @@ public class Playing extends State implements Statemethods{
     private boolean lvlCompleted=false;
     private boolean playerDying;
 
+   //private gamestates.State s;
+
 
     public Playing(Game game){
         super(game);
-        new gamestates.State(game).start(); //TODO maybe change
+        //new gamestates.State(game).start();  //TODO maybe change p VA
+
         initClasses();
 
         backgroundImg = LoadSave.GetSpriteAtlas(LoadSave.PLAYING_BG_IMG);
@@ -165,6 +168,7 @@ public class Playing extends State implements Statemethods{
         objectManager.draw(g, xLvlOffset);
 
 
+
         //so quero dar draw no pause overlay se PAUSED= TRUE
         if(paused) {
             //desenhar escuro atras para efeito de  "pausa"
@@ -184,10 +188,19 @@ public class Playing extends State implements Statemethods{
         for(int i=0; i<smallCloudsPos.length; i++){
         g.drawImage(smallCloud, SMALL_CLOUD_WIDTH*4*i - (int)(xLvlOffset*0.7), smallCloudsPos[i], SMALL_CLOUD_WIDTH,SMALL_CLOUD_HEIGHT, null); //p cada index vamos adicionar 4 clouds em width entre cada
         }
+
+        /*
+        //TODO foto do evento especial ficou mt grande por isso da lag
+        eventoEspecial = LoadSave.GetSpriteAtlas(LoadSave.EVENTO_ESPECIAL);
+        g.drawImage(eventoEspecial, 500,100, 300,300,null);
+
+
+         */
+
     }
 
     public void resetAll(){
-        //TODO: reset playing, enemy, lvl, etc.
+        //reset playing, enemy, lvl, etc.
         gameOver=false;
         paused=false;
         lvlCompleted=false;
@@ -198,7 +211,7 @@ public class Playing extends State implements Statemethods{
     }
 
     public void resetAllLvlCompleted(){
-        //TODO: reset playing, enemy, lvl, etc.
+        //reset playing, enemy, lvl, etc.
         gameOver=false;
         paused=false;
         lvlCompleted=false;

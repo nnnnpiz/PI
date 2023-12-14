@@ -33,7 +33,7 @@ public class HelpMethods {
     }
 
     private static boolean IsSolid(float x, float y, int[][] lvlData){ //precisamos de saber o quao big é o nivel mesmo total
-        int maxWidth = lvlData[0].length*Game.TILES_SIZE; //width do nivel todo
+        int maxWidth = lvlData[0].length*Game.TILES_SIZE; //width do nivel
 
         if(x<0 || x >= maxWidth)
             return true;
@@ -172,7 +172,7 @@ public class HelpMethods {
        // list.add(new Crabby(200*Game.TILES_SIZE, 200*Game.TILES_SIZE));
         for(int j =0; j<img.getHeight();j++)
             for(int i =0; i<img.getWidth(); i++){
-                Color color = new Color(img.getRGB(i,j));       //TODO VVAMOS METER UMA V.A DE GERAR INIMIIGOS AQUI
+                Color color = new Color(img.getRGB(i,j));
                 int value = color.getGreen();//usamos o GREEN do pixel para posicionar um inimigo la
                 if(value == CRABBY) //se value == 0 ou seja é um CRABBY
                     list.add(new Crabby(i*Game.TILES_SIZE, j*Game.TILES_SIZE)); //adicionamos um CRABBY nessa posiçao p meter na lista! crabbies com posiçoes
@@ -186,7 +186,7 @@ public class HelpMethods {
 
         for(int j =0; j<img.getHeight();j++)
             for(int i =0; i<img.getWidth(); i++){
-                Color color = new Color(img.getRGB(i,j));       //TODO VVAMOS METER UMA V.A DE GERAR INIMIIGOS AQUI
+                Color color = new Color(img.getRGB(i,j));
                 int value = color.getGreen();//usamos o GREEN do pixel para posicionar um inimigo la
                 if(value == SHARK) //se value == 0 ou seja é um CRABBY
                     list.add(new Shark(i*Game.TILES_SIZE, j*Game.TILES_SIZE));
@@ -194,7 +194,7 @@ public class HelpMethods {
         return list;
     }
 
-    //TODO usar outro metodo igual  a este q spawna o heroi smp no mm sitio
+    //usar outro metodo igual  a este q spawna o heroi smp no mm sitio
     public static Point GetPlayerSpawn(BufferedImage img){
         for(int j =0; j<img.getHeight();j++)
             for(int i =0; i<img.getWidth(); i++){
@@ -210,14 +210,17 @@ public class HelpMethods {
     public static ArrayList<Potion> GetPotions(BufferedImage img){
         ArrayList<Potion> list = new ArrayList<>();
 
+        /*
         for(int j =0; j<img.getHeight();j++)
             for(int i =0; i<img.getWidth(); i++){
                 Color color = new Color(img.getRGB(i,j));
                 int value = color.getBlue();//usamos o AZUL do pixel para posicionar um POTION LA, a azul tem pixeis diferentes!
                 if(value == RED_POTION || value == BLUE_POTION)
                     list.add(new Potion(i*Game.TILES_SIZE, j*Game.TILES_SIZE, value));
-
             }
+        */
+        list.add(new Potion(985, 393, RED_POTION));
+        list.add(new Potion(1243,323, BLUE_POTION));
         return list;
     }
 
@@ -237,7 +240,7 @@ public class HelpMethods {
         return list;
     }
 
-    //TODO p probabilty; int = 2 => barrel. int =3 => Box.
+    //p probabilty; int = 2 => barrel. int =3 => Box.
     public static ArrayList<GameContainer> GetContainersVA(BufferedImage img){
         ArrayList<GameContainer> list = new ArrayList<>();
 
@@ -260,7 +263,6 @@ public class HelpMethods {
                 return list;
             } //se for false volta a iterar pelo while e recalcula pos ate ter uma valida
         }
-
     }
 
     //Colina: Min=380 , Max=760 //Trap: Min=970, Max=1220, entre os dois valores n pode spawnar

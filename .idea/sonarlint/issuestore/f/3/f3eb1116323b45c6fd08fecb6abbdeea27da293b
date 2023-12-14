@@ -4,18 +4,10 @@ java:S1659"BDeclare "right" and all following declarations on a separate line.
 D
 java:S1659"'Declare "attacking" on a separate line.(Îƒ”8Åı¢ŠÆ1
 X	java:S1255"<This block of commented-out lines of code should be removed.(‘ì£Ö8Çı¢ŠÆ1
-O
-java:S1135S"2Complete the task associated to this TODO comment.(øúåÜ8Çı¢ŠÆ1
-O
-java:S1135©"2Complete the task associated to this TODO comment.(ÓåÏ8Éı¢ŠÆ1
-U
-java:S1135İ"2Complete the task associated to this TODO comment.(å˜êæıÿÿÿÿ8Íı¢ŠÆ1
 p
 java:S3776˜"RRefactor this method to reduce its Cognitive Complexity from 37 to the 15 allowed.(ü„»¢8Íı¢ŠÆ1
 Y	java:S125Ÿ"<This block of commented-out lines of code should be removed.(ö¼³ô8Íı¢ŠÆ1
 Y	java:S125û"<This block of commented-out lines of code should be removed.(Àü˜Ô8Òı¢ŠÆ1
-U
-java:S1135ò"2Complete the task associated to this TODO comment.(¯ûúòúÿÿÿÿ8Õı¢ŠÆ1
 O
 java:S1128"2Remove this unused import 'javax.imageio.ImageIO'.(‘çÔû8ãÄ¤ŠÆ1
 R

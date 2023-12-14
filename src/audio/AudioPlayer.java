@@ -95,7 +95,7 @@ public class AudioPlayer {
         if (lvlIndex % 2 == 0)
             playSong(LEVEL_1);
         else
-            playSong(LEVEL_2); //TODO SE HOUVER MAIS NIVEIS ADICIONAR AQUI!
+            playSong(LEVEL_2); //SE HOUVER MAIS NIVEIS ADICIONAR AQUI!
     }
 
     public void lvlCompleted() {

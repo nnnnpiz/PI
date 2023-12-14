@@ -31,7 +31,7 @@ public abstract class Enemy extends  Entity{
         this.enemyType=enemyType;
         maxHealth = GetMaxHealthV2(enemyType); //vida do crab
         currentHealth = maxHealth;
-        walkSpeed = Game.SCALE * 0.35f; //TODO MUDAR ISTO PARA VA, speed do inimigo
+        walkSpeed = Game.SCALE * 0.35f;
     }
 
     protected int GetMaxHealthV2(int enemy_type){

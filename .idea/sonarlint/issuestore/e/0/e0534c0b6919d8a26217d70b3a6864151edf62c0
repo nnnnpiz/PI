@@ -1,11 +1,9 @@
 
 ž
-java:S1186Z"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ö×õÄ8í¦ãµÅ1
+java:S1186Y"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ö×õÄ8í¦ãµÅ1
 ]	java:S125"<This block of commented-out lines of code should be removed.(½èéŠüÿÿÿÿ8î¦ãµÅ1
 ]	java:S125"<This block of commented-out lines of code should be removed.(¸Ó öüÿÿÿÿ8ï¦ãµÅ1
 ]	java:S125""<This block of commented-out lines of code should be removed.(›š¡˜üÿÿÿÿ8ï¦ãµÅ1
-T
-java:S1135!"2Complete the task associated to this TODO comment.(ƒÌÑëÿÿÿÿÿ8ï¦ãµÅ1
 F	java:S106&"+Replace this use of System.out by a logger.(‰Þa8ï¦ãµÅ1
 X	java:S125'"<This block of commented-out lines of code should be removed.(ÐÔðÝ8ï¦ãµÅ1
 ]	java:S125,"<This block of commented-out lines of code should be removed.(”ì¾»øÿÿÿÿ8ð¦ãµÅ1

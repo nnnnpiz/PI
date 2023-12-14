@@ -21,10 +21,6 @@ y
 java:S1450!"]Remove the "maxTilesOffset" field and declare it as a local variable in the relevant methods.(Å¬8òÊó´Å1
 S
 java:S2696-"6Make the enclosing method "static" or remove this set.(ÄïÑÓ8ôÊó´Å1
-T
-java:S11357"2Complete the task associated to this TODO comment.(•§ªÒÿÿÿÿÿ8õÊó´Å1
-O
-java:S1135="2Complete the task associated to this TODO comment.(ıšÉ8õÊó´Å1
 S
 java:S2696C"6Make the enclosing method "static" or remove this set.(İ¡²ï8õÊó´Å1
 L	java:S106D"+Replace this use of System.out by a logger.(¨˜Õìøÿÿÿÿ8öÊó´Å1

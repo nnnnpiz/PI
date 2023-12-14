@@ -80,7 +80,7 @@ public class ObjectManager {
                     //dropa um item ccacda objeto:
                     int type=0;
                     if(gc.getObjType() == BARREL)
-                        type=1; //TODO IMPLEMENTAR AQUI VA'S DOS ITEMS Q SAI NO BARREL OU BOX! AQUI SE O OBJTYPE HITTED É UM BARREL VOU ADICIONAR UMA POTION NOVA QUE VAI DROPAR COM O 1. E 1=BLUE_POTION
+                        type=1;
                     potions.add(new Potion((int)(gc.getHitbox().x+gc.getHitbox().width/2),
                             (int)(gc.getHitbox().y - gc.getHitbox().height/2),
                             type)); //adicionar novo item q vou dropar a lista de potions
@@ -99,7 +99,7 @@ public class ObjectManager {
                     //dropa um item ccacda objeto:
                     int type= Probability.halfRandomPotion();
                     System.out.println(type);
-                    //TODO IMPLEMENTAR AQUI VA'S DOS ITEMS Q SAI NO BARREL OU BOX! AQUI SE O OBJTYPE HITTED É UM BARREL VOU ADICIONAR UMA POTION NOVA QUE VAI DROPAR COM O 1. E 1=BLUE_POTION
+                    //
                     if ( type==-1) {
                         return;
                     }else if( type<2 ) {
@@ -121,7 +121,7 @@ public class ObjectManager {
         containers=new ArrayList<>(newLevel.getContainers()); //vai buscar as listas smp q damos load no novo level.
         spikes = newLevel.getSpikes(); //n precisamos de fazer uma copia dos arrays cm ta em cima pq nos nnc damos reset nos spikes nem ha spikes spawning during the game
         cannons = newLevel.getCannons();
-        projectiles.clear(); //limpamos a lista smp q começamos um novo nivel //TODO isto pode ser fonte do problema de nao disparar entre "RONDAS"
+        projectiles.clear(); //limpamos a lista smp q começamos um novo nivel
     }
 
     private void loadImgs() {

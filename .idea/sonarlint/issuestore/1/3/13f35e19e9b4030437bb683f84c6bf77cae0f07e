@@ -9,8 +9,6 @@ L	java:S106/"+Replace this use of System.out by a logger.(¦£Ãüøÿÿÿÿ8È¿†ÆÁ1
 W
 java:S11616":Add the "@Override" annotation above this method signature(³ıŸê8³óôÁ1
 O
-java:S11359"2Complete the task associated to this TODO comment.(ÜİÉ•8‘÷õÃÁ1
-O
 java:S1128"2Remove this unused import 'javax.imageio.ImageIO'.(‘çÔû8éœ…ÆÁ1
 [
 java:S1128	"9Remove this unused import 'java.awt.image.BufferedImage'.(×íĞ‡şÿÿÿÿ8éœ…ÆÁ1

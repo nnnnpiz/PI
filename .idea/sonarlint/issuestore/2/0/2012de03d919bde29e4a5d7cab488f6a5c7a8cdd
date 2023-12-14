@@ -1,88 +1,81 @@
 
 
-java:S1319ª"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ŒÛôë8Ó¶øˆÆ1
+java:S1319ª"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ŒÛôë8ùá±®Æ1
 “
-java:S1319·"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(–×õæşÿÿÿÿ8Ô¶øˆÆ1
+java:S1319·"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(–×õæşÿÿÿÿ8ùá±®Æ1
 
-java:S1319Ò"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(è±ˆ¼8Ô¶øˆÆ1
+java:S1319Ò"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(è±ˆ¼8ùá±®Æ1
 “
-java:S1319á"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(™¥¸Üúÿÿÿÿ8Ô¶øˆÆ1
+java:S1319ä"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(™¥¸Üúÿÿÿÿ8ùá±®Æ1
 
-java:S1319ñ"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(™Ñ„¥8Ô¶øˆÆ1
+java:S1319ô"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(™Ñ„¥8ùá±®Æ1
 “
-java:S1319•"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Òœ¯»úÿÿÿÿ8Ô¶øˆÆ1
+java:S1319—"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Òœ¯»úÿÿÿÿ8ùá±®Æ1
 “
-java:S1319¥"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(‹¤èåûÿÿÿÿ8Ô¶øˆÆ1
+java:S1319§"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(‹¤èåûÿÿÿÿ8úá±®Æ1
 
-java:S1319µ"aThe type of "c" should be an interface such as "List" rather than the implementation "ArrayList".(ƒÕæÃ8Ô¶øˆÆ1
+java:S1319·"aThe type of "c" should be an interface such as "List" rather than the implementation "ArrayList".(ƒÕæÃ8úá±®Æ1
 
-java:S1319µ"aThe type of "s" should be an interface such as "List" rather than the implementation "ArrayList".(ƒÕæÃ8Ô¶øˆÆ1
+java:S1319·"aThe type of "s" should be an interface such as "List" rather than the implementation "ArrayList".(ƒÕæÃ8úá±®Æ1
 …
-java:S1319µ"gThe type of "canhÃ£o" should be an interface such as "List" rather than the implementation "ArrayList".(ƒÕæÃ8Ô¶øˆÆ1
-n	java:S117µ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÕæÃ8Ô¶øˆÆ1
+java:S1319·"gThe type of "canhÃ£o" should be an interface such as "List" rather than the implementation "ArrayList".(ƒÕæÃ8úá±®Æ1
+n	java:S117·"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÕæÃ8úá±®Æ1
 f
-java:S2184J"DCast one of the operands of this subtraction operation to a "float".(ÏùãÍüÿÿÿÿ8Ö¶øˆÆ1
+java:S2184J"DCast one of the operands of this subtraction operation to a "float".(ÏùãÍüÿÿÿÿ8ıá±®Æ1
 d
-java:S2184M"GCast one of the operands of this multiplication operation to a "float".(òµé8Ö¶øˆÆ1
+java:S2184M"GCast one of the operands of this multiplication operation to a "float".(òµé8ıá±®Æ1
 a
-java:S2184Y"DCast one of the operands of this subtraction operation to a "float".(¿šı¤8Ö¶øˆÆ1
+java:S2184Y"DCast one of the operands of this subtraction operation to a "float".(¿šı¤8ıá±®Æ1
 d
-java:S2184\"GCast one of the operands of this multiplication operation to a "float".(òµé8Ö¶øˆÆ1
+java:S2184\"GCast one of the operands of this multiplication operation to a "float".(òµé8ıá±®Æ1
 e
-java:S2184²"GCast one of the operands of this multiplication operation to a "float".(·ô£¹8Ö¶øˆÆ1
+java:S2184²"GCast one of the operands of this multiplication operation to a "float".(·ô£¹8ıá±®Æ1
 e
-java:S2184²"GCast one of the operands of this multiplication operation to a "float".(·ô£¹8Ö¶øˆÆ1
+java:S2184²"GCast one of the operands of this multiplication operation to a "float".(·ô£¹8ıá±®Æ1
 e
-java:S2184À"GCast one of the operands of this multiplication operation to a "float".(‰åİ€8Ö¶øˆÆ1
+java:S2184À"GCast one of the operands of this multiplication operation to a "float".(‰åİ€8ıá±®Æ1
 e
-java:S2184À"GCast one of the operands of this multiplication operation to a "float".(‰åİ€8Ö¶øˆÆ1
+java:S2184À"GCast one of the operands of this multiplication operation to a "float".(‰åİ€8ıá±®Æ1
 W
-java:S1118":Add a private constructor to hide the implicit public one.(óÈ·í8Ó¸øˆÆ1
-j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É¹Û¹8Ô¸øˆÆ1
-j	java:S100#"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ãæê8Õ¸øˆÆ1
-T
-java:S1135$"2Complete the task associated to this TODO comment.(˜Ì®Ìûÿÿÿÿ8Õ¸øˆÆ1
-o	java:S1005"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºñƒ·øÿÿÿÿ8Ö¸øˆÆ1
-o	java:S1009"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úâøÿÿÿÿ8Ö¸øˆÆ1
+java:S1118":Add a private constructor to hide the implicit public one.(óÈ·í8¡ä±®Æ1
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É¹Û¹8¡ä±®Æ1
+j	java:S100#"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ãæê8¡ä±®Æ1
+o	java:S1005"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºñƒ·øÿÿÿÿ8£ä±®Æ1
+o	java:S1009"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úâøÿÿÿÿ8¤ä±®Æ1
 c
-java:S1126<"AReplace this if-then-else statement by a single return statement.(Ë®úÿÿÿÿ8×¸øˆÆ1
-j	java:S100A"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó˜¢•8×¸øˆÆ1
-o	java:S100R"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€¤Ğúÿÿÿÿ8×¸øˆÆ1
-o	java:S100a"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠÈï“üÿÿÿÿ8×¸øˆÆ1
-o	java:S100j"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øü¶®ıÿÿÿÿ8Ø¸øˆÆ1
-o	java:S100q"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ‡ÜŠüÿÿÿÿ8Ø¸øˆÆ1
-i	java:S100~"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òÑø8Ø¸øˆÆ1
-p	java:S100‡"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛÅñ÷ÿÿÿÿÿ8Ù¸øˆÆ1
-j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…€»88Ù¸øˆÆ1
-k	java:S100œ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çĞ×î8Ú¸øˆÆ1
-k	java:S100ª"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŒÛôë8Û¸øˆÆ1
-^	java:S125¬"<This block of commented-out lines of code should be removed.(µ·™œùÿÿÿÿ8Ü¸øˆÆ1
-U
-java:S1135¯"2Complete the task associated to this TODO comment.(òÀĞÂùÿÿÿÿ8Ü¸øˆÆ1
-p	java:S100·"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–×õæşÿÿÿÿ8İ¸øˆÆ1
-U
-java:S1135½"2Complete the task associated to this TODO comment.(òÀĞÂùÿÿÿÿ8ß¸øˆÆ1
-k	java:S100Æ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÕØŸ8ß¸øˆÆ1
-O
-java:S1135Å"2Complete the task associated to this TODO comment.(¤Ì¶K8ß¸øˆÆ1
-k	java:S100Ò"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è±ˆ¼8à¸øˆÆ1
-p	java:S100á"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¥¸Üúÿÿÿÿ8á¸øˆÆ1
-k	java:S100ñ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™Ñ„¥8â¸øˆÆ1
+java:S1126<"AReplace this if-then-else statement by a single return statement.(Ë®úÿÿÿÿ8¤ä±®Æ1
+j	java:S100A"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó˜¢•8¤ä±®Æ1
+o	java:S100R"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€¤Ğúÿÿÿÿ8¥ä±®Æ1
+o	java:S100a"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠÈï“üÿÿÿÿ8¥ä±®Æ1
+o	java:S100j"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øü¶®ıÿÿÿÿ8¦ä±®Æ1
+o	java:S100q"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ‡ÜŠüÿÿÿÿ8¦ä±®Æ1
+i	java:S100~"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òÑø8§ä±®Æ1
+p	java:S100‡"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛÅñ÷ÿÿÿÿÿ8§ä±®Æ1
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…€»88¨ä±®Æ1
+k	java:S100œ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çĞ×î8©ä±®Æ1
+k	java:S100ª"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŒÛôë8ªä±®Æ1
+^	java:S125¬"<This block of commented-out lines of code should be removed.(µ·™œùÿÿÿÿ8«ä±®Æ1
+p	java:S100·"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–×õæşÿÿÿÿ8¬ä±®Æ1
+k	java:S100Æ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÕØŸ8¯ä±®Æ1
+k	java:S100Ò"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è±ˆ¼8°ä±®Æ1
 H
-java:S1172ñ"*Remove this unused method parameter "img".(™Ñ„¥8â¸øˆÆ1
-P
-java:S1135ğ"2Complete the task associated to this TODO comment.(×õ³8â¸øˆÆ1
-H	java:S106÷"+Replace this use of System.out by a logger.(¦õõĞ8ã¸øˆÆ1
-H	java:S106ø"+Replace this use of System.out by a logger.(Šå£8ã¸øˆÆ1
-k	java:S100‹"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷ß§á8ã¸øˆÆ1
+java:S1172Ò"*Remove this unused method parameter "img".(è±ˆ¼8°ä±®Æ1
+Y	java:S125Ö"<This block of commented-out lines of code should be removed.(ıÖÊ¨8°ä±®Æ1
+p	java:S100ä"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¥¸Üúÿÿÿÿ8±ä±®Æ1
+k	java:S100ô"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™Ñ„¥8²ä±®Æ1
+H
+java:S1172ô"*Remove this unused method parameter "img".(™Ñ„¥8²ä±®Æ1
+H	java:S106ú"+Replace this use of System.out by a logger.(¦õõĞ8³ä±®Æ1
+H	java:S106û"+Replace this use of System.out by a logger.(Šå£8³ä±®Æ1
+k	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷ß§á8´ä±®Æ1
 d
-java:S1126"AReplace this if-then-else statement by a single return statement.(öé„÷ùÿÿÿÿ8ä¸øˆÆ1
-p	java:S100•"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Òœ¯»úÿÿÿÿ8ä¸øˆÆ1
-p	java:S100¥"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¤èåûÿÿÿÿ8ä¸øˆÆ1
-k	java:S100µ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÕæÃ8æ¸øˆÆ1
+java:S1126‘"AReplace this if-then-else statement by a single return statement.(öé„÷ùÿÿÿÿ8´ä±®Æ1
+p	java:S100—"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Òœ¯»úÿÿÿÿ8´ä±®Æ1
+p	java:S100§"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¤èåûÿÿÿÿ8µä±®Æ1
+k	java:S100·"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÕæÃ8¶ä±®Æ1
 p
-java:S3776µ"RRefactor this method to reduce its Cognitive Complexity from 48 to the 15 allowed.(ƒÕæÃ8æ¸øˆÆ1
+java:S3776·"RRefactor this method to reduce its Cognitive Complexity from 48 to the 15 allowed.(ƒÕæÃ8Âä±®Æ1
 H
-java:S1172µ"*Remove this unused method parameter "img".(ƒÕæÃ8ç¸øˆÆ1
+java:S1172·"*Remove this unused method parameter "img".(ƒÕæÃ8Ãä±®Æ1
 O
-java:S1128"-Remove this unused import 'java.util.Random'.(èøÉ›ùÿÿÿÿ8é¸øˆÆ1
+java:S1128"-Remove this unused import 'java.util.Random'.(èøÉ›ùÿÿÿÿ8Æä±®Æ1

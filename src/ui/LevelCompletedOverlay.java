@@ -11,7 +11,7 @@ import java.awt.image.BufferedImage;
 
 import static utils.Constants.UI.URMButtons.URM_SIZE;
 
-//TODO so vamos fazer 1 nivel mas vou mostrar o completed ig !!!
+
 
 public class LevelCompletedOverlay {
 

@@ -11,7 +11,7 @@ public class Projectile {
     private int dir; //direction da bola left ou right e multiplicamos pelo speed e aplicamos a mudança da ball d pos
     private boolean active=true; //se nao tiver active nao vamos dar draw
 
-    public Projectile(int x, int y, int dir){ //TODO x e y é a pos do spawn
+    public Projectile(int x, int y, int dir){ //x e y é a pos do spawn
         int xOffset = (int)(-3* Game.SCALE);//default p se tiver facing p LEFT.
         int yOffset = (int)(5*Game.SCALE); //estes offsets servem para mover o projectile p ficar mais realista e parecer q esta a sair da parte de tras do cannon consoante esta p direita ou p esquerda facing!
 

@@ -3,6 +3,8 @@ package entities;
 import gamestates.Playing;
 import levels.Level;
 import utils.LoadSave;
+
+import static Probabilities.Probability.funPoissonSingle;
 import static utils.Constants.EnemyConstants.*;
 
 import java.awt.*;
@@ -17,6 +19,7 @@ public class EnemyManager {
     private ArrayList<Crabby> crabbies = new ArrayList<>(); //Lista com todos os crabs
     private BufferedImage[][] sharkArr;
     private ArrayList<Shark> sharks = new ArrayList<>();
+
 
     public EnemyManager(Playing playing){
         this.playing=playing;
@@ -45,7 +48,7 @@ public class EnemyManager {
     }
 
     public void update(int[][] lvlData, Player player){
-        boolean isAnyActive = false; //TODO deixar a false!
+        boolean isAnyActive = false; //deixar a false!
         for(Crabby c : crabbies)
             if(c.isActive()){
                 c.update(lvlData, player);
@@ -58,10 +61,10 @@ public class EnemyManager {
                 isAnyActive=true;
             }
 
-        //TODO DESCOMENTAR ISTO PARA TER SEGUIMENTO DE NIVEIS!1111111111111111111111111 MUDAR ISTO PARA TALVEZ DIFERENCIAR RONDAS
+
         if(!isAnyActive) {
             //playing.setLevelCompleted(true);
-            //TODO mudar de nivel mas para o mesmo para dar um efeito de rondas !
+            //mudar de nivel mas para o mesmo para dar um efeito de rondas !
             playing.setLevelCompleted(true);
         }
     }
@@ -100,7 +103,9 @@ public class EnemyManager {
             if(c.isActive())
                 if(c.getCurrentHealth() > 0)
                     if (attackBox.intersects(c.getHitbox())) { //se der true nos tocamos no inimigo!
-                        c.hurt(10); //TODO aqui so da hit num inimigo mas podiamos ter uma VA que fazia dano para todos na ronda!
+                        c.hurt(
+                            funPoissonSingle()*6 //VA poisson de crit do player!
+                        );
                         return;
                     }
 
@@ -108,10 +113,11 @@ public class EnemyManager {
             if(s.isActive())
                 if(s.getCurrentHealth() > 0)
                     if (attackBox.intersects(s.getHitbox())) { //se der true nos tocamos no inimigo!
-                        s.hurt(10); //TODO aqui so da hit num inimigo mas podiamos ter uma VA que fazia dano para todos na ronda!
+                        s.hurt(
+                                funPoissonSingle()*6
+                        ); //VA poisson
                         return;
                     }
-
     }
 
     private void loadEnemyImgs(){

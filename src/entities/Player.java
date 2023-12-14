@@ -80,7 +80,7 @@ public class Player extends Entity{
         this.playing=playing;
         this.state = IDLE;
         this.maxHealth=100;
-        this.currentHealth=35; //TODO mudar p maxHealth
+        this.currentHealth=maxHealth; //mudar p maxHealth
         this.walkSpeed=Game.SCALE * 1.0f;
         loadAnimations();
         initHitbox(20, 27);
@@ -166,7 +166,7 @@ public class Player extends Entity{
     }
 
     private void updateAttackBox() {
-        if(right && left){ //TODO isto foi um fix temporario para um bug onde pressionavamos ambos left e right e a attackbox fica do lado contrario se mantiver um dos botoes pressed. melhor este esparguete
+        if(right && left){ //isto foi um fix temporario para um bug onde pressionavamos ambos left e right e a attackbox fica do lado contrario se mantiver um dos botoes pressed. melhor este esparguete
             if(flipW == 1 ){
                 attackBox.x = hitbox.x + hitbox.width+ (int)(Game.SCALE*10); //attack box follows a hitbox do player + um offset
             } else {
@@ -218,7 +218,7 @@ public class Player extends Entity{
 
         //Power bar UI:
         g.setColor(Color.YELLOW);
-        g.fillRect(powerBarXStart + statusBarX, powerBarYStart + statusBarY, powerWidth, powerBarHeight); //TODO ver teste se powerWidth funciona ou powerBarWidth é o correto p usar no width
+        g.fillRect(powerBarXStart + statusBarX, powerBarYStart + statusBarY, powerWidth, powerBarHeight);
     }
 
 
@@ -495,7 +495,7 @@ public class Player extends Entity{
     public void powerAttack() {
         if(powerAttackActive)
             return;
-        if(powerValue >= 60) { //custa 60 de power para fazer um power attack TODO mudar?
+        if(powerValue >= 60) { //custa 60 de power para fazer um power attack
             powerAttackActive=true;
             changePower(-60);
         }

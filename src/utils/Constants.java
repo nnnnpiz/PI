@@ -98,7 +98,7 @@ public class Constants {
         public static final int SHARK_DRAWOFFSET_X = (int) (8 * Game.SCALE);
         public static final int SHARK_DRAWOFFSET_Y = (int) (6 * Game.SCALE);
 
-        //TODO nb
+        //nb
         public static final int LVL_DIFFICUlTY_0 =0;
         public static final int LVL_DIFFICUlTY_1 =1;
         public static final int LVL_DIFFICUlTY_2 =2;
@@ -127,7 +127,7 @@ public class Constants {
             return 0;
         }
 
-        public static int GetMaxHealth(int enemy_type){//TODO MUDAR ISTO MAYBE PARA USAR O GENERATERNDDISCRETE2
+        public static int GetMaxHealth(int enemy_type){
 
             switch (enemy_type) {
                 case CRABBY:

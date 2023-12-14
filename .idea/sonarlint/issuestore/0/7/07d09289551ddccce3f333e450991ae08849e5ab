@@ -1,21 +1,21 @@
 
-g	java:S112L"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¸­åÃ1
-g	java:S112_"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8–èîÃ1
+g	java:S112M"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¸­åÃ1
+g	java:S112`"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8–èîÃ1
 
-java:S1319f"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¦Ÿ°8¹­åÃ1
+java:S1319g"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¦Ÿ°8¹­åÃ1
 \
 java:S1118":Add a private constructor to hide the implicit public one.(ê„²âùÿÿÿÿ8Ó­åÃ1
 ]	java:S125"<This block of commented-out lines of code should be removed.(‰­¦”ûÿÿÿÿ8Ó­åÃ1
-j	java:S1000"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬Ò’ê8Ô­åÃ1
-L	java:S1068"+Replace this use of System.out by a logger.(úÍËæûÿÿÿÿ8Ô­åÃ1
-F	java:S106="+Replace this use of System.out by a logger.(û¶w8Õ­åÃ1
-o	java:S100D"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏÏú»şÿÿÿÿ8Õ­åÃ1
-j	java:S100f"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦Ÿ°8×­åÃ1
+j	java:S1001"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬Ò’ê8Ô­åÃ1
+L	java:S1069"+Replace this use of System.out by a logger.(úÍËæûÿÿÿÿ8Ô­åÃ1
+F	java:S106>"+Replace this use of System.out by a logger.(û¶w8Õ­åÃ1
+o	java:S100E"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏÏú»şÿÿÿÿ8Õ­åÃ1
+j	java:S100g"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦Ÿ°8×­åÃ1
 O
-java:S1135e"2Complete the task associated to this TODO comment.(†Æëˆ8×­åÃ1
+java:S1135f"2Complete the task associated to this TODO comment.(†Æëˆ8×­åÃ1
 ;
-java:S2119h"Save and re-use this "Random".(¡Å”¦8Ø­åÃ1
+java:S2119i"Save and re-use this "Random".(¡Å”¦8Ø­åÃ1
 B
-java:S1128"%Remove this unused import 'java.awt'.(ï´µ©8©ãÎÄ1
+java:S1128"%Remove this unused import 'java.awt'.(ï´µ©8‡ñªÆ1
 d
-java:S1128"BRemove this unused import 'utils.Constants.EnemyConstants.CRABBY'.(Şÿ‡Àşÿÿÿÿ8©ãÎÄ1
+java:S1128"BRemove this unused import 'utils.Constants.EnemyConstants.CRABBY'.(Şÿ‡Àşÿÿÿÿ8‡ñªÆ1
